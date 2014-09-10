@@ -1,0 +1,388 @@
+{% if page.handle == 'about-us' %}
+<div id="page_support">
+	<div class="banner_about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 col-xs-12">
+					<h1>ABOUT SOUNDCAST</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	{% include 'about-us' %}
+	{% include 'contacta' %}
+
+{% elsif page.handle == 'find-retailers' %}
+<div id="cms_pad">
+	<div id="page-body">
+		<div class="page-title">
+			<h1>{{ page.title }}</h1>
+		</div>
+		<div class="std">
+			<p class="text-center">For International Locations, please view our
+				<a href="/pages/international-distributors">International Distributors page</a>
+			</p>
+			<p class="text-center">For authorized online resellers visit our 				<a href="/pages/safe-buying-guide">Safe Buying Guide</a>
+
+			</p>
+		</div>
+
+{% include 'retailers-header' %}
+{% include 'retailers-body' %}
+{% include 'bullseye' %}
+</div>
+</div> <!-- end page body for pages that have it -->
+
+{% elsif page.handle == 'reviews-news' %}
+
+<div id="page_media">
+	<div class="banner_media">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 col-xs-12">
+					<h1>REVIEWS &amp; NEWS</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include 'subnav' %}
+	{% include 'awards' %}
+	{% include 'reviews-desktop' %}
+	{% include 'reviews-mobile' %}
+	{% include 'reviews-video' %}
+	{% include 'reviews-contact' %}
+
+{% elsif page.handle == 'terms' %}
+{% include 'press-body' %}
+
+{% elsif page.handle == 'privacy-policy' %}
+
+{% include 'privacy' %}
+
+{% elsif page.handle == 'return-policy' %}
+
+{% include 'return-policy' %}
+
+{% elsif page.handle == 'support-all' %}
+<div id="page_support">
+	<div class="banner_support">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 col-xs-12">
+					<h1>SUPPORT</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div id="support" class="container">
+
+	{% include 'support-top' %}
+	{% include 'support-blocks' %}
+
+
+{% elsif page.handle == 'forgot-password' %}
+
+
+
+<div id="page-body">
+    <div class="page-title">
+    <h1>Forgot Your Password?</h1>
+</div>
+<div id="password_forgot" class="container">
+<hr>
+
+    <p id="removez" class="reset-success success hidden">Instructions for resetting your password has been sent.</p>
+
+<div class="retrieve">
+    {% form 'recover_customer_password' %}
+      {{ form.errors | default_errors }}
+
+      {% if form.posted_successfully? %}
+      <p class="success_pw">An email has been sent containing password reset instructions.</p>
+      {% endif %}
+    <div class="fieldset col-xs-12 text-center">
+        <h2 class="legend">Retrieve your password here</h2>
+        <p>Please enter your email address below. You will receive a link to reset your password.</p>
+        <ul class="form-list">
+            <li class="row">
+                <label for="email_address" class="required col-xs-4 text-right email_label_login"><em>*</em>Email Address</label>
+                <div class="input-box col-xs-8 text-left">
+                    <input type="text" name="email" alt="email" id="recover-email" class="input-text required-entry validate-email" value="" />
+                </div>
+            </li>
+                    </ul>
+    </div>
+    <div class="buttons-set text-center">
+        <p class="required text-center">* Required Fields</p>
+        <p class="back-link text-center"><a href="/account/login/"><small>&laquo; </small>Back to Login</a></p>
+        <button type="submit" title="Submit" class="btn btn-default msgs"><span><span>Submit</span></span></button>
+    </div>
+  {% endform %}
+</div>
+</div>
+
+{% elsif page.handle == 'partner-resources' %}
+
+
+<div id="page_resources">
+
+	<div class="banner_resources">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 col-xs-12">
+					<h1>PARTNER RESOURCES</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="body-wrapper container">
+		<div class="row">
+			<!-- Main Content -->
+			<div class="main-content col-md-10 col-xs-12">
+
+				{% include 'partnersubnav' %}
+
+				{% include 'intro-section' %}
+
+				<section id="assets-section" class="page-section">
+					<header class="section-header clearfix">
+						<h1 class="section-title">Brand Resources</h1>
+					</header><!-- /.section-header -->
+
+					<div class="section-body">
+
+
+
+					{% include 'gen-resources' %}
+					{% include 'melody-resources' %}
+					{% include 'outcast-resources' %}
+					{% include 'outcastjr-resources' %}
+					{% include 'icast-resources' %}
+					{% include 'uat-resources' %}
+					{% include 'surroundcast-resources' %}
+					{% include 'subcast-resources' %}
+
+
+
+					</div><!-- /.section-body -->
+				</section><!-- /#soundcast-resources -->
+
+				{% include 'contact-resources' %}
+
+			</div><!-- /.main-content -->
+
+			<!-- Sidebar -->
+			<div class="sidebar-content col-md-2 hidden-sm hidden-xs">
+
+				{% include 'melody-guides' %}
+
+				{% include 'brochure' %}
+
+				{% include 'brand-nav' %}
+
+			</div><!-- /.sidebar-content -->
+		</div><!-- /.row -->
+	</div><!-- /.body-wrapper -->
+</div><!-- page-resources -->
+
+
+
+{% elsif page.handle == 'international-distributors' %}
+
+{{page.content}}
+
+
+{% elsif page.handle == 'skinit' %}
+
+<div id="page-body">
+
+	<div id="skinit_page">
+
+		{% include 'skinit-banner' %}
+
+
+		{% include 'skinit-intro' %}
+
+		{% include 'skinit-design' %}
+
+		{% include 'skinit-info' %}
+
+	</div>
+</div>
+
+{% elsif page.handle == 'releases' %}
+
+<div id="page-body">
+	<div id="releases">
+		<div class="container">
+			<h1 class="sectionz-title text-left">PRESS RELEASES</h1>
+			<h3 class="sectionz-title black">2014 RELEASES</h3>
+
+			{% for article in blogs["2014"].articles %}
+				<div class="release-article">
+					<p class="release-date">{{ article.published_at | date: '%m.%d.%y' }}</p>
+					<a href="{{article.excerpt}}">{{article.title}}</a>
+				</div>
+				<br>
+			{% endfor %}
+			<h3 class="sectionz-title black">2013 RELEASES</h3>
+
+			{% for article in blogs["2013"].articles %}
+				<div class="release-article">
+					<p class="release-date">{{ article.published_at | date: '%m.%d.%y' }}</p>
+					<a href="{{article.excerpt}}">{{article.title}}</a>
+				</div>
+				<br>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% elsif page.handle == 'press-images' %}
+
+<div id="page-body">
+	<div class="container">
+		<h1 class="sectionz-title black">Soundcast Photos & Logos</h1>
+	</div>
+
+	<div ng-controller="pressCtrl" ng-cloak>
+		<div class="container">
+		<div class="row">
+		{% raw %}
+		<div id="press-item" ng-repeat="item in items" class="col-sm-3 nopadding text-center">
+			<img src="{{item.image}}" class="img-thumbnail" alt="">
+
+			<br>
+			<p class="text-letter">{{ item.title }}</p>
+			    <div id="pressdl" class="row text-center hidden-xs">
+		            <div class="col-sm-6 text-right">
+		                <a href="{{item.low}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="{{item.high}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <div id="pressdl" class="row text-center visible-xs">
+		            <div class="col-xs-6">
+		                <a href="{{item.low}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-xs-6">
+		                <a href="{{item.high}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		<br>
+		</div>
+
+		{% endraw %}
+		</div>
+		</div>
+	</div>
+</div>
+
+{% elsif page.handle == 'press-videos' %}
+
+<div id="page-body">
+	<div class="container">
+		<h1 class="section-title black">Soundcast Videos</h1>
+	</div>
+	<br>
+
+<section id="pressvideos">
+			<br>
+			<div id="press-video"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-sm-7">
+								<iframe src="//www.youtube.com/embed/5vTnzmwhYJg" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<div class="col-sm-5">
+								<h4 class="white">MEET MELODY</h4>
+									<label>EMBED CODE:</label>
+										<span class="vidfield">www.youtube.com/embed/5vTnzmwhYJg</span>
+									<br>
+									<br>
+									<label>YOUTUBE URL:</label>
+										<span class="vidfield">https://www.youtube.com/watch?v=5vTnzmwhYJg</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+		</section>
+
+	<!-- below used for multiple videos -->
+	<!-- <div ng-controller="pressCtrl" ng-cloak>
+		<div class="container">
+			<div class="row">
+				{% raw %}
+				<div id="press-video" ng-repeat="video in videos" class="col-sm-12 text-center">
+
+					<div class="col-sm-12 text-center">
+
+					<iframe width="640" height="390" src="{{video.src}}" frameborder="0" allowfullscreen></iframe>
+
+						<h2>{{video.title}}</h2>
+					</div>
+				</div>
+				{% endraw %}
+			</div>
+		</div>
+	</div> -->
+
+
+</div>
+
+{% elsif page.handle == 'fair-newsletter' %}
+	<div id="page-body">
+		<div class="container">
+			<h1 class="section-title black">Newsletter</h1>
+		</div>
+		<br>
+
+		{% include 'newsletter' %}
+	</div>
+
+
+{% elsif page.handle == 'fitness' %}
+
+<div id="page-body">
+	<div class="container">
+			<br>
+			<div class="col-sm-12 text-center">
+				<img src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/Soundcast/sc_crossfit_gym_zps1a4b833e.jpg" style="display:inline;" class="img-responsive" alt="" />
+			</div>
+			<br>
+			<div class="col-sm-12">
+				<h4 class="text-center orange"> WELCOME !</h4>
+				<p class="text-center arial">{{page.content}}</p>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<div class="jumbotron">
+						<h2 class="open-sans text-center">Enter Access Code</h2>
+						<p class="lead">
+					    <input class="form-control" type="text" ng-model="code" placeholder="Enter your code here"/>
+					  </p>
+						{%raw%}
+		  			<p class="text-center"><a class="btn btn-lg btn-warning" ng-href="http://www.shareasale.com/r.cfm?u={{code}}&b=590710&m=52841&afftrack=&urllink=gosoundcast%2Ecom">GO!</a></p>
+						{% endraw %}
+					</div>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			<div class="col-sm-12">
+				<p class="text-center arial">Want to get involved?<br>For information on becoming a Soundcast affiliate,<br> contact: <a href="mailto:affiliate@goSoundcast.com">affiliate@goSoundcast.com</a></p>
+			</div>
+			<br>
+</div>
+{% endif %}

@@ -1,0 +1,41 @@
+<div id="reviews-list">
+        <header class="section-header makeitfade-default clearfix">
+            <h1 class="section-title">Product Reviews</h1>
+        </header>
+        <div class="section-subheading">
+            <a href="/pages/media-press" type="button" class="btn btn-default">View Professional Reviews <span class="fa fa-caret-right"></span></a>
+        </div>
+
+            {% raw %}
+            <div ng-controller="ReviewsCtrl">
+                <div  id="client-slider" class="owl-carousel">
+                    <div ng-repeat="outcast in outcasts" class="item">
+                        <div class="post">
+                            <header>
+                                <h1>{{outcast.title}}</h1>
+                            </header>
+
+                            <div class="rating-box">
+
+                            </div>
+                            <div class="post-content-wrapper">
+                                <p class="post-content">
+                                    {{outcast.description}}
+                                </p>
+                            </div>
+                            <small class="date">Posted On {{outcast.date}}</small>
+                            <footer>
+                                <div class="client_image">
+                                    Review By {{outcast.author}}
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endraw %}
+
+        </div>
+
+    </div>
+</div><!-- #reviews-list -->

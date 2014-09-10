@@ -1,0 +1,284 @@
+(function(){
+
+
+	var Melody = [
+			{
+				device: 'Melody',
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/Melody_450x250.jpg',
+				doc_name: 'English Manual Espanol Francias Owners Manual' ,
+				doc_link: 'http://cdn.gosoundcast.com/docs/melody/melody_english.pdf'
+			},
+			{
+				doc_name: 'Melody Italiano Deutsch Nederlands',
+				doc_link: 'http://cdn.gosoundcast.com/docs/melody/melody_deutsch.pdf'
+			}
+
+	]
+
+	var Outcast = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/outcast_450x250.jpg',
+				doc_name: 'OutCast English Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/OutCast-1.2-Manual-051614-lrz.pdf"
+			},
+			{
+				doc_name: 'OutCast Spanish Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastspanish.pdf'
+			},
+			{
+				doc_name: 'OutCast French Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastfrench.pdf'
+			},
+			{
+				doc_name: 'OutCast German Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastgerman.pdf'
+			},
+			{
+				doc_name: 'OutCast Dutch Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastdutch.pdf'
+			},
+			{
+				doc_name: 'OutCast Russian Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastrussian.pdf'
+			},
+			{
+				doc_name: 'OutCast Netherlands Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastnetherlands.pdf'
+			},
+			{
+				doc_name: 'OutCast Product Sheet',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastproductsheet.pdf'
+			},
+			{
+				doc_name: 'Stereo Applications',
+				doc_link: 'http://cdn.gosoundcast.com/docs/stereoapp.pdf'
+			},
+			{
+				doc_name: 'Safety Declaration',
+				doc_link: 'http://cdn.gosoundcast.com/docs/safetydeclaration.pdf'
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Daisy Chain [Multi-Room] Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/daisychain.pdf"
+			}
+		]
+
+	var Outcastjr = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/Outcast_Jr._450x250.jpg',
+				doc_name: 'OutCast Jr English Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/outcastjreng.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr Spanish Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/outcastjrspan.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr French Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/outcastjrfrench.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr German Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/outcastjrgerman.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr Dutch Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/outcastjrdutch.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr Russian Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/outcastjritalian.pdf"
+			},
+
+			{
+				doc_name: 'Stereo Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/stereoapp.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Daisy Chain [Multi-Room] Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/daisychain.pdf"
+			}
+
+	]
+
+	var icast = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/icast_450x250.jpg',
+				doc_name: 'iCast Transmitter Owners Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/transownersman.pdf"
+			},
+			{
+				doc_name: 'iCast Transmitter Owners Manual Europe',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatrspan.pdf"
+			},
+			{
+				doc_name: 'RF Power Saving Mode Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatrfrench.pdf"
+			},
+			{
+				doc_name: 'RF Power Saving Mode Manual Europe',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatrgerman.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+
+			{
+				doc_name: 'Connecting Computer Speakers To The UAT',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/speakersanduat.pdf"
+			},
+			{
+				doc_name: 'Stereo applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/stereoapp.pdf"
+			},
+			{
+				doc_name: 'Surround Sound applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/surroundapp.pdf"
+			},
+
+			{
+				doc_name: 'On Stage application',
+				doc_link: "http://cdn.gosoundcast.com/docs/onstageapp.pdf"
+			}
+
+	]
+
+	var UAT = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/uta_450x250.jpg',
+				doc_name: 'UAT English Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatreng.pdf"
+			},
+			{
+				doc_name: 'UAT Spanish Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatrspan.pdf"
+			},
+			{
+				doc_name: 'UAT French Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatrfrench.pdf"
+			},
+			{
+				doc_name: 'UAT German Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatrgerman.pdf"
+			},
+			{
+				doc_name: 'UAT Dutch Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatrdutch.pdf"
+			},
+			{
+				doc_name: 'Soundcast UAT 1.2&3.4 Product Sheet',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatprodsheet.pdf"
+			},
+			{
+				doc_name: 'Troubleshooting The UAT',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/troubleshootuat.pdf"
+			},
+			{
+				doc_name: 'Important Info For Mac Users',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/macuseralert.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+			{
+				doc_name: 'Controlling iTunes With Your iPhone/iPod Touch',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Connecting Computer Speakers To The UAT',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/speakersanduat.pdf"
+			},
+			{
+				doc_name: 'P.A. Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/paapps.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Daisy Chain [Multi-Room] Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/daisychain.pdf"
+			}
+
+	]
+
+
+	var template = Handlebars.compile( $('#template').html() );
+
+
+{% if page.handle == 'melody-docs' %}
+	var temp = template(Melody);
+
+	$('#support_doc').append( template(Melody) );
+{% elsif page.handle == 'outcast-docs' %}
+	var temp = template(Outcast);
+
+	$('#support_doc').append( template(Outcast) );
+{% elsif page.handle == 'outcastjr-docs' %}
+	var temp = template(Outcastjr);
+
+	$('#support_doc').append( template(Outcastjr) );
+
+{% elsif page.handle == 'uat-docs' %}
+	var temp = template(UAT);
+
+	$('#support_doc').append( template(UAT) );
+{% elsif page.handle == 'icast-docs' %}
+	var temp = template(icast);
+
+	$('#support_doc').append( template(icast) );
+{% endif %}
+
+
+})();

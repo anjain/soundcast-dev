@@ -1,0 +1,14 @@
+<!-- start sidebar -->
+
+
+
+            <div class="col-lg-4 col-md-4 sidebar hidden-sm hidden-xs">
+                <form class="searchForm" method="get" action="/search" role="search">
+
+                    <input type="text" name="q" onfocus="if(this.value == 'Search my blogs') { this.value = ''; }" value="Search my blogs" />
+                    <input type="hidden" name="type" value="blog" />
+                </form>
+                <h4>ARCHIVE</h4>
+                <div class="dividerWidget"></div>
+                    {% include 'archives' %}
+            </div><!-- end sidebar

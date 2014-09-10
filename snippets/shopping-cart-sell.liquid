@@ -1,0 +1,345 @@
+<div class="crosssell sidebar-block">
+
+                    <ul class="products-list">
+
+                    {% if cart.item_count == 1 %}
+                    {% for item in cart.items %}
+                    {% if item.product.title contains 'SubCast' %}
+                    <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your SubCast complete with SurroundCast, the long-range wireless transmitter and receiver</h1>
+                    </header>
+                            {% for product in collections.sub-related.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="iCast">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                            {%endfor%}
+                        {%endif%}
+                    {% if item.product.title contains 'SurroundCast' %}
+                    <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your SurroundCast complete with SubCast, the long-range wireless transmitter and receiver</h1>
+                    </header>
+                            {% for product in collections.surround-related.products %}
+
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="iCast">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                            {%endfor%}
+                        {%endif%}
+
+
+                    {% if item.product.tags contains 'outcast' %}
+                                        <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your product long range up to 300 ft. with one of our transmitter and receiver accessories:</h1>
+                    </header>
+
+                    {% if item.product.handle contains 'outcast-jr' %}
+                        {% for product in collections.outcast-jr-related-products.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="{{product.title}}">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}                    
+                    {%else%}
+                    {% for product in collections.cross-sell.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="{{product.title}}">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    {%endif%}
+                {% endif %}
+                     {% endfor %}
+                {% endif %}
+
+
+
+                {% if cart.item_count == 2 %}
+                    {% for item in cart.items limit:1 %}
+                    {% if item.product.tags contains 'outcast' %}
+                    <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your product completely wireless with one of our transmitter and receiver accessories for your favorite Soundcast Products:</h1>
+                    </header>
+                    {% for product in collections.cross-sell.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="{{product.title}}">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                {% if item.product.tags contains 'icast' %}
+                    <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your product completely wireless with one of our transmitter and receiver accessories for your favorite Soundcast Products:</h1>
+                    </header>
+                    {% for product in collections.icast-sell.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="{{product.title}}">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                {% if item.product.tags contains 'uat' %}
+                    <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your product completely wireless with one of our transmitter and receiver accessories for your favorite Soundcast Products:</h1>
+                    </header>
+                    {% for product in collections.uat-sell.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="{{product.title}}">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+               {% if item.product.tags contains 'blue' %}
+                    <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your product completely wireless with one of our transmitter and receiver accessories for your favorite Soundcast Products:</h1>
+                    </header>
+                    {% for product in collections.blue-sell.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="{{product.title}}">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                    {% if item.product.title contains 'SubCast' %}
+                    <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your SubCast complete with SurroundCast, the long-range wireless transmitter and receiver</h1>
+                    </header>
+                            {% for product in collections.sub-related.products %}
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="iCast">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'grande' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                            {%endfor%}
+                        {%endif%}
+                {% if item.product.title contains 'SurroundCast' %}
+                <header class="sidebar-header">
+                        <h1 class="sidebar-title">Make your SurroundCast complete with Subcast, the long-range wireless converter for subwoofers</h1>
+                    </header>
+                            {% for product in collections.surround-related.products %}
+
+                        <li class="item">
+                            <div class="product-wrapper">
+                                <a class="product-image" href="{{product.url}}" title="iCast">
+                                    <div class="image-wrapper">
+                                        <img class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="iCast" class="img-thumbnail">
+                                    </div>
+                                </a>
+                                <div class="product-details">
+                                        <header class="detail-header clearfix">
+                                            <span class="text-wrapper">
+                                                <span class="product-name"><a href="{{product.url}}">{{product.title}}</a></span> <span class="product-price"><span class="price">{{product.price | money}}</span></span>
+                                            </span>
+                                        </header>
+                                        <div class="crosssell-actions">
+
+                                        <form method="post" action="/cart/add">
+                                          <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                          <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" class="btn btn-addtocart btn-productaction">Add To Cart <span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                        </div>
+                                </div>
+                            </div>
+                        </li>
+                            {%endfor%}
+                        {%endif%}
+
+
+                     {% endfor %}
+                {% endif %}
+
+
+                    </ul>
+
+                </div>

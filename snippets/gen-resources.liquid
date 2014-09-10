@@ -1,0 +1,57 @@
+						<a id="resources-general" class="section-anchor"></a>
+						<section class="resources resources-general">
+							<header class="subsection-header clearfix">
+								<h1 class="subsection-title">
+									<a data-toggle="collapse" data-parent="#resources-general-collapse" href="#general-section" class="collapsed">Logos, Fonts, Other Assets <i class="fa fa-caret-down"></i></a>
+								</h1>
+							</header>
+							<div id="general-section" class="collapse resources-collapse">
+								<section class="resources-section">
+
+									<ul class="row" id="gen">
+
+										{% raw %}
+										<script id="general" type="text/x-handlebars-template">
+											{{#each this}}
+												<li class="resource col-xs-6 col-sm-3">
+													<div class="thumbs">
+														<div class="thumb-wrapper">
+															<img src="{{image}}">
+														</div>
+														<a href="{{link}}">
+															<span class="title">
+																<span><i class="fa fa-cloud-download fa-2x"></i></span>
+															</span>
+														</a>
+														<p>{{title}}</p>
+													</div>
+												</li>
+											{{/each}}
+										</script>
+										{% endraw %}
+									</ul>
+								</section>
+							</div>
+						</section><!-- /.resources-general -->
+
+<a id="resources-demo" class="section-anchor"></a>
+						<section class="resources resources-demo">
+							<header class="subsection-header clearfix">
+								<h1 class="subsection-title">
+									<a data-toggle="collapse" data-parent="#resources-demo-collapse" href="#demo-section" class="collapsed">Demo Track<i class="fa fa-caret-down"></i></a>
+								</h1>
+							</header>
+							<div id="demo-section" class="collapse resources-collapse">
+								<section class="resources-section">
+
+									<div class="text-center" id="gen">
+										<audio controls>
+                                         <source src="{{'Soundcast_Demo_Track_2014.mp3' | asset_url}}" type="audio/mpeg">
+                                          <source src="{{'Demo350k.ogg' | asset_url}}" type="audio/ogg">
+                                                    Your browser does not support this audio format.
+                                        </audio><br>
+                                      <a class="text-center" href="{{'Soundcast_Demo_Track_2014.mp3' | asset_url}}" download="DemoTrack.mp3">Download</a>
+									</div>
+								</section>
+							</div>
+						</section><!-- /.resources-general -->

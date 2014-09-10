@@ -1,0 +1,67 @@
+<div id="features-text" class="melody-features">
+	<div class="feature-block left-block">
+		<a href="{{ 'snowyhazel.jpg' | asset_url }}" class="thumb" onclick="return false;">
+			<div class="feature-pdp section-1 feature-item feature-item-1 clearfix">
+				<div class="feature-icon icon-weather-32"></div>
+				<div class="feature-description hidden-xs">
+					<h2>Weather Resistant Design</h2>
+					<p>Entertain indoors or outdoors thanks to Melody’s weather resistant enclosure</p>
+				</div>
+			</div>
+		</a>
+		<a href="{{ 'outcast-bbq.jpg' | asset_url }}" class="thumb" onclick="return false;">
+			<div class="feature-pdp section-1 feature-item feature-item-2 clearfix">
+				<div class="feature-icon icon-battery-32"></div>
+				<div class="feature-description hidden-xs">
+					<h2>Built-in 20 Hour Rechargeable Battery</h2>
+					<p>Play up to 20 hours with a built-in high capacity lithium-ion battery</p>
+					
+				</div>
+			</div>
+		</a>
+		<a href="{{ 'bluecastin.jpg' | asset_url }}" class="thumb" onclick="return false;">		
+			<div class="feature-pdp section-1 feature-item feature-item-3 clearfix">
+				<div class="feature-icon icon-plugin-32"></div>
+				<div class="feature-description hidden-xs">
+				{% if product.handle contains 'bluetooth-hd' %}
+				<h2>Bluetooth® HD Enabled w/ Included BlueCast Adaptor</h2>
+				{% else %}
+					<h2>Works with BlueCast Bluetooth&reg; HD Receiver</h2>
+				{% endif %}
+					<p>Stream your music from a wide array of devices to your OutCast via Bluetooth&reg; HD technology</p>
+
+				</div>
+			</div>
+		</a>
+
+	</div>
+	<div class="feature-block right-block">
+		<a href="{{'outcast-top.jpg' | asset_url}}" class="thumb" onclick="return false;">		
+			<div class="feature-pdp section-1 feature-item feature-item-4 clearfix">
+				<div class="feature-icon icon-surround-32"></div>
+				<div class="feature-description hidden-xs">
+					<h2>Incredible 360º Sound</h2>
+					<p>Experience 360° sound with our omni-directional speaker technology</p>
+				</div>
+			</div>
+		</a>
+		<a href="{{'bass_driver.jpg' | asset_url}}" class="thumb" onclick="return false;">		
+			<div class="feature-pdp section-1 feature-item feature-item-5 clearfix">
+				<div class="feature-icon icon-keypad-32"></div>
+				<div class="feature-description hidden-xs">
+					<h2>8" Woofer and 100 Watts of Audio Power</h2>
+					<p>Achieve ground shaking bass with a 8” down-firing subwoofer and 60 watts of audio power</p>
+				</div>
+			</div>
+		</a>
+		<a href="{{'outcast-deck.jpg' | asset_url}}" class="thumb" onclick="return false;">
+			<div class="feature-pdp section-1 feature-item feature-item-6 clearfix">
+				<div class="feature-icon icon-handle-32"></div>
+				<div class="feature-description hidden-xs">
+					<h2>Built-in Keypad Controls</h2>
+					<p>Control your music without touching your device with OutCast’s built-in backlit controls and set the mood for your music at night with a blue ambient light</p>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>

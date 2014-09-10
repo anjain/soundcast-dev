@@ -1,0 +1,74 @@
+<div class="container">
+    <div id="relblog" class="shopList">
+        <div class="col-lg-12">
+            {% if blog.title == 'Blog' %}
+            <h4>RELATED BLOGS</h4>
+            {% else %}
+            <h4>RELATED NEWS</h4>
+            {% endif %}
+            <div class="dividerWidget"></div>
+
+        </div>
+
+        {% if blog.title == 'Blog' %}
+        {% for article in blogs["blog"].articles limit:4%}
+        {% if article.tags contains 'classic' %}
+        <div class="col-md-3 col-sm-6 col-xs-12 relblog">
+            <div class="blogThumbz">
+                <a href="{{article.url}}" class="shopItem">
+                    <div class="overlay view"><h4>VIEW POST</h4></div>
+                    <img src="{{article.excerpt}}" alt="" class="shopImg blogas" id="relimg"/>
+                    <div class="thumbBar"></div>
+                </a>
+
+                <div class="shopItemDetails">
+                    <a href="{{article.url}}"><h4 class="art-title">{{article.title}}</h4></a>
+                    <p>{{article.content | strip_html | truncate: 50}}</p>
+                    <a href="{{ article.url }}" class="buttonz subHeadBtn">READ MORE</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        {% endif %}
+        {% if article.tags contains 'photo' %}
+        <div class="col-md-3 col-sm-6 col-xs-12 relblog blogPostMasonry">
+            <div class="blogThumbz">
+                <ul class="bxsliderBlog">
+                    {{article.excerpt}}
+                </ul>
+                <div class="thumbBar"></div>
+            </div>
+            <div class="shopItemDetails">
+                <a href="{{article.url}}"><h4 class="art-title">{{article.title}}</h4></a>
+                <p>{{article.content | strip_html | truncate: 50}}</p>
+                <a href="{{article.url}}" class="buttonz subHeadBtn">READ MORE</a>
+            </div>
+            <br>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+
+
+
+        {% else %}
+        {% for article in blogs["News"].articles limit:4%}
+        <div class="col-lg-3 col-md-3 col-xs-6">
+            <a href="{{article.url}}" class="shopItem">
+                <div class="overlay"><h4>VIEW NEWS</h4></div>
+                <img src="{{article.excerpt}}" alt="" class="shopImg" id="relimg" />
+            </a>
+            <div class="shopItemDetails">
+                <a href="{{article.url}}"><h4>{{article.title | truncate: 30}}</h4></a>
+                <p>{{article.content | strip_html | truncate: 90}}</p><br>
+                <a href="{{article.url}}" class="buttonz subHeadBtn">READ MORE</a>
+            </div>
+
+
+        </div>
+        {% endfor %}
+        {% endif %}
+
+
+    </div><!-- end row -->
+</div>

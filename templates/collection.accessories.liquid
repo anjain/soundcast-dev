@@ -1,0 +1,93 @@
+<div id="page-body">
+	<div class="banner_accessories">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+			
+				</div>
+				<div class="col-sm-4 hidden-xs acc">
+					{{ 'bag_sale2.png' | asset_url | img_tag: '', 'img-responsive' }}
+				</div>
+				<div class="col-lg-2 col-sm-2 col-xs-2">
+					<h1 class="pull-right">ACCESSORIES</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+
+
+			<div class="catalog-category-view">
+				<div class="category-accessories">
+					<div class="category-products container">
+						<ul class="products-grid" style="list-style: none; padding: 0px">
+							<div class="products-group">
+							{% for product in collections.accessories.products %}
+								<li class=" product text-center">
+									<header class="product-header">
+										<h1 class="product-name">
+											{{product.title}}
+										</h1>
+										{% if product.title contains 'SkinIt'%}
+										<br>
+										{%else%}
+										<p class="font12">Model #{{ product.variants.first.sku }}</p>
+										{%endif%}
+									</header>
+									<div class="row details">
+										<div class="col-sm-6 image-wrapper">
+					{% if product.tags contains 'sale' %}
+                        <!-- <div class="sales smallGrey sale">SALE</div> -->
+                        {% elsif product.available %}
+                        {% else %}
+                        <div class="sales smallGrey sale">SOLDOUT</div>
+                        {% endif %}
+
+												<img class="img-responsive img-thumbnail" src="{{ product.featured_image | product_img_url: 'medium' }}">
+
+										</div>
+										<div class="col-sm-6 text-wrapper">
+											{{product.content}}
+										</div>
+										<div class="row action">
+											<div class="col-sm-6 text-center">
+											{% if product.tags contains 'skinit' %}
+											{% else %}
+												<div class="price-box">
+
+														   {% if product.tags contains 'sale' %}
+                        <span class="product-price lead">{{ product.price | money }}{% if product.compare_at_price_max > product.price %} <span class="old-price">{{ product.compare_at_price_max | money }}</span>{% endif %}</span>
+                        {% else %}
+                         <span class="product-price">{{product.price | money }}</span>
+                        {% endif %}
+
+
+												</div>
+											{% endif %}
+											</div>
+
+											<!-- THIS NEEDS TO BE A PURCHASE BUTTON -->
+											<div class="col-sm-6">
+											{% if product.tags contains 'skinit' %}
+											<a href="/pages/skinit" style="margin: 3px auto" type="button" title="Learn More" class="btn btn-retail">Learn More...</a>
+											{% else %}
+											<form method="post" action="/cart/add">
+												  <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+												  <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+												<button type="submit" title="Add to Cart" class="btn btn-addtocart btn-productaction">
+													Add to Cart <span class="fa fa-shopping-cart"></span>
+												</button>
+											</form>
+											{% endif %}
+											</div>
+										</div>
+									</div>
+								</li>
+							{% endfor %}
+
+
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>

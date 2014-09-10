@@ -1,0 +1,127 @@
+
+                    <table class="itemTable shop table-responsive">
+                <tr>
+                    <th class="text-center">PRODUCT</th>
+                    <th class="text-center">QUANTITY</th>
+                    <th class="text-center">PRICE</th>
+                    <th class="text-center">TOTAL</th>
+                </tr>
+                {% for item in cart.items %}
+                <tr>
+                    <td class="text-left">
+                    <a class="remove-from-cart-button letters-white inline-block dark-gray-bg" href="/cart/change?line={{ forloop.index }}&quantity=0"><span class="fa fa-trash-o"> Remove</span></a>
+                    <a href="#"><img src="{{ item.product.featured_image.src | product_img_url: 'grande' }}" alt="{{ item.title | escape }}" width="80" alt="" /></a> <a href="{{ item.product.url | within: collections.all }}">{{ item.product.title }}</a></td><div>
+
+                                        </div></td>
+
+
+                    <td class="text-center">
+
+
+                        <input name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-min="" data-max="0" title="Qty" maxlength="12" class="cart-width" size="4" />
+                         <button type="submit" id="update-cart" class="btn btn-link" name="update" value="Update" /> <span><span><span class="fa fa-refresh"><br>Update</span></span></span></button>
+
+                    </td>
+                    <td class="text-center">{{ item.price | money }}</td>
+                    <td class="text-center">{{ item.line_price | money }}</td>
+                </tr>
+
+
+                {%endfor%}
+
+            </table>
+
+
+            <!-- <div class="visible-xs">
+            {% for item in cart.items %}
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="#"><img src="{{ item.product.featured_image.src | product_img_url: 'grande' }}" alt="{{ item.title | escape }}" width="80" alt="" /></a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="{{ item.product.url | within: collections.all }}">{{ item.title }}</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <input name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-min="" data-max="0" title="Qty" maxlength="12" class="cart-width" size="4" />
+                    </div>
+                    <div class="col-xs-6">
+                        <td class="text-center">{{ item.price | money }}</td>
+                    <td class="text-center">{{ item.line_price | money }}</td>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+ -->
+
+
+<!--
+                    <table id="shopping-cart-table" class="data-table cart-table table" style="border-top: 1px solid #DDD">
+                        <thead>
+                            <tr>
+                                <th><span class="nobr">PRODUCT</span></th>
+                                <th>&nbsp;</th>
+                                <th class="a-center"><span class="nobr">UNIT PRICE</span></th>
+                                <th class="a-center">QUANTITY</th>
+                                <th class="a-center">SUBTOTAL</th>
+                                <th class="a-center">&nbsp;</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                         {% for item in cart.items %}
+                            <tr class="first last odd">
+
+                                <td><a href="{{item.product.url}}" title="Melody" class="product-image"><img src="{{ item.product.featured_image | product_img_url: 'small' }}" width="75" height="75" alt="Melody"></a></td>
+                                <td>
+                                    <h2 class="product-name">
+                                        <a href="{{item.product.url}}">{{item.product.title}}</a>
+                                    </h2>
+                                </td>
+
+
+                                <td class="a-right">
+                                    <span class="cart-price">
+                                        <span class="price">{{item.product.price | money }}</span>
+                                    </span>
+
+
+                                </td>
+                                <td class="a-center">
+                                    <input type="text" size="4" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="input-text qty" value="1" />
+                                    <button type="submit" id="update-cart" class="btn btn-link" name="update" value="Update" /> <span><span><span class="fa fa-refresh"><br>Update</span></span></span></button>
+
+                                </td>
+                                <td class="a-right">
+                                    <span class="cart-price">
+
+                                        <span class="price">{{ item.line_price | money }}</span>
+                                    </span>
+                                </td>
+                                <td class="a-center last"><a href="/cart/change?line={{ forloop.index }}&quantity=0" title="Remove item" style="color: #000"><span class="fa fa-trash-o"> Remove</span></a></td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table> -->
+                    <div class="shopping-btns clearfix" style="padding: 2em 0px; border-top: 1px solid #ddd;">
+                        <div class="pull-left">
+                            <ul class="checkout-types">
+                                <li>
+
+                                    <button name="checkout" value="Check out" type="submit" id="checkout" title="Checkout" class="btn btn-checkout">
+                                        <span><span>Checkout <i class="fa fa-credit-card"></i></span></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                            <a href="/cart/clear"class="btn btn-default" id="empty_cart_button"><span><span>CLEAR SHOPPING CART</span></span></a>
+                            <a href="/" type="button" title="CONTINUE SHOPPING" class="btn btn-default" onclick="">
+                                <span><span>CONTINUE SHOPPING</span></span>
+                            </a>
+
+                        </div>
+
+                    </div>

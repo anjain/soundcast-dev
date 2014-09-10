@@ -1,0 +1,63 @@
+
+
+<div id="cms_pad">
+	<div id="page-body">
+
+		<div class="page-title">
+			<h1>{{ page.title }}</h1>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row">
+			{% include 'support-images' %}
+			<br>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+					{% if page.handle != 'support-bluecast' %}
+						<div class="section-subheading-support pull-left">Download Support Files</div>
+					{% endif %}
+					</div>
+					<div class="row">
+					{% include 'support-files' %}
+						<br />
+
+					</div>
+				<div class="section-subheading-support pull-left">Contact Us!</div>
+					<br /><hr />
+					<div class="row">
+						<div class="col-xs-6">
+							<p class="lead">Call Us!</p>
+						</div>
+						<div class="col-xs-6">
+							<p class="lead">619-591-0126</p>
+							<p class="lead">800-722-1293 (Toll-Free)</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<p class="lead">Send Us A Message!</p>
+						</div>
+						<div class="col-xs-6">
+							<p class="lead">support@goSoundcast.com</p>
+						</div>
+					</div>
+				</div> <!-- end page body for pages that have it -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% if page.handle == 'support-melody' %}
+
+	{% include 'faq-melody' %}
+
+{% elsif page.handle == 'support-outcast' %}
+
+	{% include 'faq-outcast' %}
+
+{% elsif page.handle =='support-outcastjr' %}
+
+	{% include 'faq-outcastjr' %}
+
+{% endif %}

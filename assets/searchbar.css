@@ -1,0 +1,80 @@
+ .search-form {
+position: relative;
+float: left;
+background: transparent;
+border: none;
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+list-style: none;
+
+}
+
+.search-form input[type="ser"] {
+    width:48px;
+    height:45px;
+    background: #184378;
+    padding:0;
+    padding-left:44px; /* account for 4px border to get perfect circle */
+    /*border:solid 2px rgb(200,200,200);*/
+
+   /* font-weight:300;*/
+    /*font-size:18px;*/
+    color:rgb(150,150,150);
+
+   /* -webkit-border-radius:24px;
+       -moz-border-radius:24px;
+            border-radius:24px;*/
+
+    -webkit-transition:width 0.5s ease-in-out;
+       -moz-transition:width 0.5s ease-in-out;
+            transition:width 0.5s ease-in-out;
+}
+
+.search-form input[type="ser"]:focus,
+.search-form input[type="ser"]:active {
+    width:220px;
+    padding-left: 49px;
+    border: none;
+
+   /* -webkit-box-shadow:4px 4px 8px rgb(220,220,220);
+       -moz-box-shadow:4px 4px 8px rgb(220,220,220);
+            box-shadow:4px 4px 8px rgb(220,220,220);*/
+}
+
+label {
+    display:block;
+
+    padding:0;
+    top:0;
+    left:0;
+    cursor:pointer;
+}
+
+.searchbar {
+    background:#184378;
+    font-size:0;
+    position:absolute;
+    width:48px;
+    height:45px;
+    /*padding-top: 8px;*/
+    border: 0px;
+    }
+
+p.result-empty {
+    background-color:rgb(255,180,180);
+    padding:12px;
+    border:solid 1px rgb(255,130,130);
+    margin:0;
+    margin-top:18px;
+    color:rgb(50,50,50);
+}
+
+p.result-success {
+    background-color:rgb(180,255,180);
+    padding:12px;
+    border:solid 1px rgb(130,255,130);
+    margin:0;
+    margin-top:18px;
+    color:rgb(50,50,50);
+}

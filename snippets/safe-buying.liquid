@@ -1,0 +1,102 @@
+<div ng-controller="safeCtrl">	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="text-left">
+					<h1 class="fauna org text-left">Beware of Unauthorized Resellers</h1>
+				</div>
+				<p>Soundcast wireless audio products and speakers are sold in the United States through a network of authorized dealers & retailers appointed by Soundcast. 
+				Soundcast dealers and retailers have been selected based on their ability to properly represent, support and provide quality customer service. Some of these 
+				dealers may have Internet sites on which they have been authorized by Soundcast to sell our products. Soundcast provides a warranty on products sold only 
+				by our authorized dealers.</p><br>
+				<p><b>Make sure you purchase from an authorized Soundcast Dealer.</b> Visit our <a href="/pages/find-retailers">Find a Retailer</a> page, enter your zip code (US only) and click “Search”. </p><br>
+				<p>Please call 1-800-722-1293 to speak with a customer service specialist or email <a href="mailto:support@goSoundcast.com">support@goSoundcast.com</a> should you have any questions or need 
+				assistance finding the nearest authorized Soundcast dealer or online retailer.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="text-left">
+					<h1 class="fauna org text-left">Authorized Online Dealers</h1>
+
+				</div>	
+				<p>The following dealers have been authorized to sell Soundcast products online:</p>
+				<br>
+				
+					<div class="row">
+						<div ng-repeat="logo in logos">
+							<div class="col-sm-2 col-xs-3">
+							{% raw %}
+								<img ng-src="{{logo.img}}" class="img-responsive {{logo.classe}}"/>
+							{% endraw %}
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div ng-repeat="logo in logos2">
+							<div class="col-sm-2 col-xs-3">
+							{% raw %}
+								<img ng-src="{{logo.img}}" class="img-responsive {{logo.classe}}"/>
+							{% endraw %}
+							</div>
+						</div>
+					</div>					
+				
+				<br>
+
+				<p>A note about Amazon.com: Soundcast does NOT sell directly to Amazon.com (listings with sold by Amazon.com), but does authorize a small number of 
+				our dealer partners to sell via the Amazon Marketplace (Fulfilled by Amazon). These listings will indicate the “seller name” and “shipped by Amazon.com”. 
+				Soundcast aggressively monitors and addresses un-authorized selling on Amazon Marketplace.</p>
+
+				<p>Contact <a href="mailto:sales@goSoundcast.com">sales@goSoundcast.com</a> if you have any questions or would like to inquire about becoming an authorized online dealer.</p>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="text-left">
+					<h1 class="fauna ruby text-left">Unauthorized Online Dealers</h1>
+				</div>	
+				<br>
+				<p>The following online companies are <b>NOT AUTHORIZED</b> to sell Soundcast products: (list not all inclusive)</p>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<div ng-repeat="list in items1">
+				{% raw %}
+					<li style="list-style:none;">{{list.items}}</li>
+				{% endraw %}
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div ng-repeat="list in items2">
+				{% raw %}
+					<li style="list-style:none;">{{list.items}}</li>
+				{% endraw %}
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div ng-repeat="list in items3">
+				{% raw %}
+					<li style="list-style:none;">{{list.items}}</li>
+				{% endraw %}
+				</div>
+			</div>			
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-12">
+				<p>Unfortunately, Soundcast products are sometimes sold by companies that are not authorized or trained to do so. Goods sold by these unauthorized 
+				companies are NOT purchased from Soundcast; instead they are acquired from a variety of other sources, and many times damaged, used, or altered 
+				from their original condition. This is true even when unauthorized companies state that the product is “new”. We are using our best efforts to prohibit these 
+				companies from taking advantage of consumers. We encourage you to use diligence and common sense when making your Soundcast purchase.</p>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+<br>

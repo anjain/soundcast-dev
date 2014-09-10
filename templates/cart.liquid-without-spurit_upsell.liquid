@@ -1,0 +1,109 @@
+
+<!-- Begin empty cart -->
+{% if cart.item_count == 0 %}
+
+<div class="checkout-cart-index">
+    <div id="page-body">
+        <div class="page-title">
+            <br/>
+            <h1>Shopping Cart Is Empty</h1>
+            <br>
+        </div>
+
+        <div class="cart-empty">
+            <div class="container">
+                <div class="row">
+                    <div class="hidden-xs col-sm-offset-2 col-sm-3 text-center">
+                        <span class="fa fa-shopping-cart"></span>
+                    </div>
+                    <div class="col-sm-5 text-center">
+                        <p>You have no items in your shopping cart</p>
+                        <a href="/" class="btn btn-default">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End empty cart -->
+
+<!-- Begin cart -->
+{% else %}
+
+
+
+
+
+
+<!-- Main Product Detail Section -->
+
+<div class="checkout-cart-index">
+    <div id="page-body">
+        <div class="cart">
+            <div class="container" style="margin: 3em auto">
+                <div class="page-title title-button section-block">
+                    <h1 class="section-title mod text-left">MY CART</h1>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-9 col-xs-12 main-cart" style="border-right: 1px solid #DDD">
+
+                        <form action="/cart" method="post" id="cartform">
+                            <div class="hidden-cart">
+                                {% include 'cart-table' %}
+
+
+                                {% include 'shopping-buttons' %}
+                            </div>
+
+                        </form>
+                        <form action="/cart" method="post" id="cartform">
+                            <div class="visible-xs">
+                                {% include 'cart-mobile' %}
+                                <div class="shopping-btns clearfix" style="padding: 2em 0px; border-top: 1px solid #ddd;">
+                                    <div class="col-xs-12 text-center">
+                                        <ul class="checkout-types">
+                                            <li>
+
+                                                <button name="checkout" value="Check out" type="submit" id="checkout" title="Checkout" class="btn btn-checkout">
+                                                    <span><span>Checkout <i class="fa fa-credit-card"></i></span></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-xs-12 text-center">
+                                        <a href="/cart/clear"class="btn btn-default" id="empty_cart_button"><span><span>CLEAR SHOPPING CART</span></span></a>
+                                        <a href="/" type="button" title="CONTINUE SHOPPING" class="btn btn-default" onclick="">
+                                            <span><span>CONTINUE SHOPPING</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            </form>
+                        </div><!-- .main-cart -->
+
+
+                        <div class="col-sm-12 col-md-3 col-xs-12 sidebar-cart">
+
+                            {% include 'shopping-cart-sell' %}
+
+
+                            <h4 class="text-center">Questions?</h4>
+
+                            <p class="text-center">info@goSoundcast.com</p>
+
+                            {% include 'social-nav' %}
+                        </div><!-- Sidebar -->
+
+                    </div>
+                </div><!--row -->
+            </div><!-- container -->
+        </div><!-- cart -->
+    </div>
+</div>
+
+{%endif%}

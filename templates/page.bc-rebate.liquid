@@ -1,0 +1,71 @@
+<div id="rebate">
+<div class="nav-pad"></div>
+<div class="top-banner">
+  <h1 class="text-center">The world’s greatest portable speaker just got better!</h1>
+  <span class="arrow-down"></span>
+</div>
+<div class="container">
+	<div class="row">
+  		<div class="col-sm-4 savings text-center">
+      		<h1>$80</h1>
+          	<hr>
+          <h3><em>EASY REBATE!</em></h3>
+          	<hr>
+      	</div>
+      	<div class="col-sm-8 text-center">
+          	<br><br><br>
+      		<h1>Now when you purchase an OutCast or OutCast Jr. and a BlueCast Bluetooth® receiver together get $80 off instantly!</h1>
+          <h4 class="disclaim text-right"><em>(Now through November 1st)</em></h4>
+      	</div>
+  	</div>
+</div>
+  <hr class="divider">
+<div class="container">
+
+							{% for product in collections.rebate.products %}
+								<div class="product text-center col-sm-6 {%cycle 'bord-rt',''%}">
+									<div class="row action">
+											<div class="col-sm-6 text-center">
+											{% if product.tags contains 'skinit' %}
+											{% else %}
+												<div class="price-box">
+                                                <h1>{{ product.price | money | remove: ' ' | remove_first: '.99' }}</h1>
+                                                 <h4>Originally {{ product.compare_at_price_max | money | remove: ' ' |  remove_first: '.99' }}</h4>
+												</div>
+											{% endif %}
+											</div>
+
+											<!-- THIS NEEDS TO BE A PURCHASE BUTTON -->
+											<div class="col-sm-5">
+											{% if product.tags contains 'skinit' %}
+											<a href="/pages/skinit" style="margin: 3px auto" type="button" title="Learn More" class="btn btn-retail">Learn More...</a>
+											{% else %}
+											<form method="post" action="/cart/add">
+												  <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+												  <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+												<button type="submit" title="Add to Cart" class="btn btn-addtocart btn-productaction">
+													Add to Cart <span class="fa fa-shopping-cart"></span>
+												</button>
+											</form>
+											{% endif %}
+                                              <p><a href="{{product.url}}">view product</a></p>
+											</div>
+										</div>
+									<div class="row details">
+										<div class="col-sm-12 image-wrapper">
+                                        {% if product.available %}
+                                        {% else %}
+                                        <div class="sales smallGrey sale">SOLDOUT</div>
+                                        {% endif %}
+                                          <div class="col-xs-6"><img class="img-responsive img-thumbnail" src="{{ product.featured_image | product_img_url: 'large' }}"><h2>{{product.title}}</h2></div>
+                                          <div class="col-xs-1"><h1>+</h1></div>
+                                          <div class="col-xs-4"><img class="img-responsive img-thumbnail" src="http://i1370.photobucket.com/albums/ag251/anthroisphoto/Soundcast/bluecast_04_458x458_grande_zpsd8963854.jpg~original"><h2>BlueCast</h2></div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+
+							
+			</div>
+</div>
+<br><br>

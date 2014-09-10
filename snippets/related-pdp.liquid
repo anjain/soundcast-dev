@@ -1,0 +1,235 @@
+<!-- Added Row Class so that block will clear -->
+<div id="related" class="page-section clearfix">
+
+    <!-- Header -->
+    <header class="section-header">
+        <h1 class="section-title"><span>Make your {{product.title}} long-range up to 300ft with of these items:</span></h1>
+    </header>
+
+    <!-- Block Content -->
+    <div class="section-body">
+        <ul class="mini-products-list container" id="block-related" style="">
+
+        {% if product.handle contains 'outcast-jr' %}
+{% for product in collections.outcast-jr-related-products.products %}
+            <li class="item-wrapper">
+         
+                <div class="item">
+                    <div class="product">
+                        <a
+                        title="{{product.title}}"
+                        class="product-image clearfix"
+                        data-toggle="modal"
+                        data-target="#info-{{product.title}}"
+                        >
+                                      {% if product.tags contains 'sale' %}
+                        <!-- <div class="sales smallGrey sale">SALE</div> -->
+                        {% elsif product.available %}
+                        {% else %}
+                        <div class="sales smallGrey sale">SOLDOUT</div>
+                        {% endif %}
+                        <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt=" " style="max-width: 100%"/>
+                    </a>
+                </div>
+                <div class="details details-BlueCast">
+                    <header class="detail-header clearfix">
+                        <h1 class="product-name">{{product.title}}</h1>
+                        {% if product.title == 'BlueCast' %}
+                        <h2 class="product-blurb">Wireless Bluetooth&reg; HD Receiver</h2>
+                        {% elsif product.handle contains 'icast' %}
+                        <h2 class="product-blurb">Long-range wireless transmitter and charging dock</h2>
+                        {% elsif product.title == 'UAT' %}
+                        <h2 class="product-blurb">Long-range wireless Universal Audio Transmitter</h2>
+                        {% endif %}
+
+                    </header>
+                    <div class="detail-body clearfix">
+                       {% if product.tags contains 'sale' %}
+                        <span class="product-price">{{ product.price | money }}{% if product.compare_at_price_max > product.price %} <span class="old-prices">{{ product.compare_at_price_max | money }}</span>{% endif %}</span>
+                        {% else %}
+                         <span class="product-price lead">{{product.price | money }}</span>
+                        {% endif %}
+                        <div class="action-buttons pull-right clearfix">
+                            <div class="action-addtocart pull-left">
+                                       <form method="post" action="/cart/add">
+                                              <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                              <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" title="Add to Cart" class="btn btn-addtocart"><span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+                            </div>
+                            <div class="action-getinfo pull-right">
+                                <button
+                                title="View Product Info"
+                                class="btn btn-viewinfo"
+                                data-toggle="modal"
+                                data-target="#info-{{product.title}}">
+                                <span class="fa fa-search"></span>
+                            </button>
+
+                            <div class="modal fade" id="info-{{product.title}}" tabindex="-1" role="dialog" aria-labelledby="BlueCastLabel" aria-hidden="true">
+                                <div class="modal-dialog product-modal">
+                                    <div class="modal-content">
+                                        <header class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h1 class="modal-title" id="myModalLabel">{{product.title}}</h1>
+                                            <h2 class="modal-subtitle"></h2>
+                                        </header>
+                                        <div class="modal-body">
+                                            <div class="image-wrapper">
+                                                <img id="image" class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="OutCast Jr. " title="OutCast Jr. ">
+                                            </div>
+                                            <div class="short-description">
+                                             {% if product.title == 'BlueCast' %}
+                                                Add Bluetooth&reg; HD to any OutCast speaker for a completely wireless 33ft range.
+                                            {% elsif product.handle contains 'icast' %}
+                                            Transmit your music wirelessly for up to 300 feet from your iPhone/iPod while charging your device.
+                                            {% elsif product.title == 'UAT' %}
+                                            Achieve 300 feet of wireless audio transmission from your computer or home entertainment system.
+                                            {%endif%}
+                                            </div>
+                                        </div>
+
+                                        <footer class="modal-footer">
+                                            <div class="action-buttons pull-right clearfix">
+                                                <div class="action-addtocart pull-left">
+                                       <form method="post" action="/cart/add">
+                                              <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                              <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" title="Add to Cart" class="btn btn-addtocart">Add To Cart<span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                                </div>
+                                                <div class="action-getinfo pull-right">
+                                                    <button title="View Product Info" class="btn btn-viewinfo" onclick="{{product.url}}">
+                                                        View Page  <span class="fa fa-arrow-right"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-price pull-right">
+                                                <span><span class="price">{{product.price | money}}</span></span>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.details -->
+        </div><!-- /.item -->
+    </li><!-- /.item-wrapper -->
+    {% endfor %}
+
+        {%else%}
+        {% for product in collections.cross-sell.products %}
+            <li class="item-wrapper">
+                <div class="item">
+                    <div class="product">
+                        <a
+                        title="{{product.title}}"
+                        class="product-image clearfix"
+                        data-toggle="modal"
+                        data-target="#info-{{product.title}}"
+                        >
+                                         {% if product.tags contains 'sale' %}
+                        <div class="sales smallGrey sale">SALE</div>
+                        {% elsif product.available %}
+                        {% else %}
+                        <div class="sales smallGrey sale">SOLDOUT</div>
+                        {% endif %}
+                        <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt=" " style="max-width: 100%"/>
+                    </a>
+                </div>
+                <div class="details details-BlueCast">
+                    <header class="detail-header clearfix">
+                        <h1 class="product-name">{{product.title}}</h1>
+                        {% if product.title == 'BlueCast' %}
+                        <h2 class="product-blurb">Wireless Bluetooth&reg; HD Receiver</h2>
+                        {% elsif product.handle contains 'icast' %}
+                        <h2 class="product-blurb">Long-range wireless transmitter and charging dock</h2>
+                        {% elsif product.title == 'UAT' %}
+                        <h2 class="product-blurb">Long-range wireless Universal Audio Transmitter</h2>
+                        {% endif %}
+
+                    </header>
+                    <div class="detail-body clearfix">
+                        <div class="product-price">
+                            <span>{{product.price | money }}</span>
+                        </div>
+                        <div class="action-buttons pull-right clearfix">
+                            <div class="action-addtocart pull-left">
+                                       <form method="post" action="/cart/add">
+                                              <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                              <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" title="Add to Cart" class="btn btn-addtocart"><span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+                            </div>
+                            <div class="action-getinfo pull-right">
+                                <button
+                                title="View Product Info"
+                                class="btn btn-viewinfo"
+                                data-toggle="modal"
+                                data-target="#info-{{product.title}}">
+                                <span class="fa fa-search"></span>
+                            </button>
+
+                            <div class="modal fade" id="info-{{product.title}}" tabindex="-1" role="dialog" aria-labelledby="BlueCastLabel" aria-hidden="true">
+                                <div class="modal-dialog product-modal">
+                                    <div class="modal-content">
+                                        <header class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h1 class="modal-title" id="myModalLabel">{{product.title}}</h1>
+                                            <h2 class="modal-subtitle"></h2>
+                                        </header>
+                                        <div class="modal-body">
+                                            <div class="image-wrapper">
+                                                <img id="image" class="img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="OutCast Jr. " title="OutCast Jr. ">
+                                            </div>
+                                            <div class="short-description">
+                                             {% if product.title == 'BlueCast' %}
+                                                Add Bluetooth&reg; HD to any OutCast speaker for a completely wireless 33ft range.
+                                            {% elsif product.handle contains 'icast' %}
+                                            Transmit your music wirelessly for up to 300 feet from your iPhone/iPod while charging your device.
+                                            {% elsif product.title == 'UAT' %}
+                                            Achieve 300 feet of wireless audio transmission from your computer or home entertainment system.
+                                            {%endif%}
+                                            </div>
+                                        </div>
+
+                                        <footer class="modal-footer">
+                                            <div class="action-buttons pull-right clearfix">
+                                                <div class="action-addtocart pull-left">
+                                       <form method="post" action="/cart/add">
+                                              <input name="id" type="hidden" value="{{ product.variants.first.id }}" />
+                                              <input name="quantity" style="display:inline; width: 40px" type="text" value="1" class="hidden"/>
+                                            <button type="submit" name="add" title="Add to Cart" class="btn btn-addtocart">Add To Cart<span class="fa fa-shopping-cart"></span></button>
+                                        </form>
+
+                                                </div>
+                                                <div class="action-getinfo pull-right">
+                                                    <button title="View Product Info" class="btn btn-viewinfo" onclick="{{product.url}}">
+                                                        View Page  <span class="fa fa-arrow-right"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-price pull-right">
+                                                <span><span class="price">{{product.price | money}}</span></span>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.details -->
+        </div><!-- /.item -->
+    </li><!-- /.item-wrapper -->
+    {% endfor %}
+    {%endif%}
+
+
+</ul>
+
+
+</div>

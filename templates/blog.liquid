@@ -1,0 +1,17 @@
+
+{% paginate blogs["Blog"].articles by 25 %}
+
+<div class="account">
+{% include 'blog-head' %}
+
+{% include 'blog-body' %}
+
+{% include 'blog-sidebar' %}
+
+{% include 'blog-end' %}
+
+
+{% include 'paginations' %}
+</div>
+
+{% endpaginate %}

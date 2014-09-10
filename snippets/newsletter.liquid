@@ -1,0 +1,117 @@
+<div class="form-container container">
+
+		{% form 'contact' %}
+
+				{% if form.posted_successfully? %}
+					<div class="row pad-left40">
+						<div class="response alert alert-success">Thank you for submitting!</div>
+					</div>
+				{% endif %}
+				{% if form.errors %}
+					<div class="errorForm feedback">
+						<!-- {{ form.errors.size }} or {{ form.errors | size }} -->
+						<p>Oops, sorry. We were unable to submit your inquiry because it contained {{ form.errors | size | pluralize: 'an error', 'a few errors' }}. Please correct the following and submit again:</p>
+						{% for field in form.errors %}
+							<p>The {{ field | capitalize | replace: 'Body', 'Message' }} field {{ form.errors.messages[field] }}.</p>
+						{% endfor %}
+					</div>
+				{% endif %}
+
+
+			<div id="newsletter" class="forms">
+				<fieldset>
+					<ol>
+						<div class="row">
+							<li class="col-sm-2"></li>
+							<li class="form-row text-input-row name-field col-sm-4">
+								<label>First Name:</label>
+								<input type="text" id="contact_form_name" name="contact[first-name]" required value="{{ contact.fields.first-name }}"/>
+							</li>
+							<li class="form-row text-input-row name-field col-sm-4">
+								<label>Last Name:</label>
+								<input type="text" id="contact_form_name" name="contact[last-name]" required value="{{ contact.fields.last-name }}"/>
+							</li>
+							<li class="col-sm-2"></li>
+						</div>
+						<div class="row">
+							<li class="col-sm-2"></li>
+							<li class="col-sm-4">
+								<label>Product Purchased:</label>
+								<select id="contactFormQuestionType" name="contact[Product Purchased]">
+									<option>Select Product</option>
+									<option>None</option>
+									<option>Melody</option>
+									<option>OutCast + BlueCast</option>
+									<option>OutCast Jr. + BlueCast</option>
+									<option>OutCast + BlueCast</option>
+
+								</select>
+							</li>
+							<li class="col-sm-4">
+								<label>Quantity:</label>
+								<select id="contactFormQuestionType" name="contact[question type2]">
+									<option>Select Quantity</option>
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5+</option>
+
+								</select>
+							</li>
+							<li class="col-sm-2"></li>
+						</div>
+						<div class="row">
+							<li class="col-sm-2"></li>
+							<li class="col-sm-4">
+								<label>Additional Purchased:</label>
+								<select id="contactFormQuestionType" name="contact[question type3]">
+									<option>Select Product</option>
+									<option>None</option>
+									<option>Melody</option>
+									<option>OutCast + BlueCast</option>
+									<option>OutCast Jr. + BlueCast</option>
+									<option>OutCast + BlueCast</option>
+								</select>
+							</li>
+							<li class="col-sm-4">
+								<label>Quantity:</label>
+								<select id="contactFormQuestionType" name="contact[question type4]">
+									<option>Select Quantity</option>
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5+</option>
+								</select>
+							</li>
+							<li class="col-sm-2"></li>
+						</div>
+						<div class="row">
+							<li class="col-sm-2"></li>
+							<li class="col-sm-4">
+								<label>Transmitter Purchased(if any):</label>
+								<select id="contactFormQuestionType" name="contact[question type5]">
+									<option>Select Transmitter</option>
+									<option>None</option>
+									<option>iCast</option>
+									<option>UAT</option>
+								</select>
+							</li>
+							<li class="col-sm-6"></li>
+						</div>
+						<li class="button-row col-sm-8 text-right">
+							<input type="submit" value="Submit" name="submit" class="btn btn-submit bm0" />
+						</li>
+						<br>
+					</ol>
+					<br>
+					<input type="hidden" name="v_error" id="v-error" value="Required" />
+					<!-- <input type="hidden" name="v_email" id="v-email" value="Enter a valid email" /> -->
+				</fieldset>
+				<br>
+			</div>
+		{% endform %}
+		</div>

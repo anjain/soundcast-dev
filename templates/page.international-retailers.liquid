@@ -1,0 +1,29 @@
+<div id="page-body" ng-controller="intlCtrl">
+	<div id="international_page" class="container">
+		<div class="row">
+			<div class="section-subheading-support">Authorized International Distributors</div>
+			<hr />
+		</div>
+<div class="row">
+	<div style="height: 300px" class="col-sm-3 col-xs-12" ng-repeat ="country in retailers" ng-cloak>
+	{%raw%}
+		<h3>{{country.countryname}}</h3>
+			<ul>
+				<li><span style="font-size: 12px;">{{country.name}}</span></li>
+				<li><span style="font-size: 12px;">{{country.po}}</span></li>
+				<li><span style="font-size: 12px;">{{country.addr}}</span></li>
+				<li><span style="font-size: 12px;">{{country.city}}</span></li>
+				<li><span style="font-size: 12px;">{{country.countr}}</span></li>
+				<li><span style="font-size: 12px;">{{country.phone}}</span></li>
+				<li><span style="font-size: 12px;">{{country.phone2}}</span></li>
+				<li><span style="font-size: 12px;">{{country.email}}</span></li>
+				<li><a href="{{country.link}}" target="_blank"><span style="font-size: 12px;">{{country.link}}</span></a></li>
+			</ul>
+			<br>
+	{%endraw%}
+	</div>
+</div>
+
+
+</div>
+</div>

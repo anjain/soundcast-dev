@@ -1,0 +1,32 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html ng-app="soundcast">
+
+  {% include 'head' %}
+  {% include 'navbar' %}
+
+  {{ content_for_header }}
+
+<body>
+
+
+
+{{content_for_layout}}
+
+
+
+{% include 'footer' %}
+
+{% if page.handle == 'media-press' %}
+  <!-- up to top -->
+    <a href="#"><i class="go-top hidden-xs fa fa-angle-double-up  "></i></a>
+    <!--//end-->
+{% endif %}
+
+{% include 'scripts' %}
+</body>
+
+</html>

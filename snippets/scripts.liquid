@@ -1,0 +1,1511 @@
+<!-- Custom Scripts Library -->
+
+	<script src="{{ 'jquery-1.10.2.min.js' | asset_url }}"></script>
+	<script src="{{'jquery.bxslider.min.js' | asset_url }}"></script>
+
+	<script src="{{ 'bootstrap.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.easing-1.3.pack.js' | asset_url }}"></script>
+    <script src="{{ 'masonry.pkgd.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.flexslider-min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.carouFredSel-6.2.1-packed.js' | asset_url }}"></script>
+    <script src="{{ 'jflickrfeed.min.js' | asset_url }}"></script>
+    <script src="{{ 'inview.js' | asset_url }}"></script>
+    <script src="{{ 'isotope.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.prettyPhoto.js' | asset_url }}"></script>
+    <script src="{{ 'owl.carousel.min.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.cycle2.min.js' | asset_url }}"></script>
+    <script src="{{ 'main.js' | asset_url }}"></script>
+    <script src="{{ 'grid.js' | asset_url }}"></script>
+    <script src="{{ 'handlebars-v1.3.0.js' | asset_url }}"></script>
+	<script src="{{ 'reviews.js' | asset_url }}"></script>
+	<script src="{{ 'scroll-to.js' | asset_url }}"></script>
+	<script src="{{ 'stickySidebar.js' | asset_url }}"></script>
+	<script src="{{ 'gotop.js' | asset_url }}"></script>
+
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f78ceaf115fc4f3"></script>
+
+
+<!-- Related Blog Images Size -->
+
+<script>
+
+(function(){
+	$('#relblog ul.bxsliderBlog li img').addClass('blogas');
+	$('.blogas').height('170').width('255');
+	$('.blogasview').width('1110');
+
+
+
+})();
+</script>
+<!--Sidebar-->
+
+<script>
+
+$(document).ready(function(){
+
+	$.stickysidebarscroll('#assets-nav', {offset: {top: 130, bottom: 350}});
+
+});
+
+</script>
+<script>
+
+  //intialize isotope plugin
+  $('.blogCreative .row').imagesLoaded(function() {
+      $('.blogCreative .row').isotope({
+        // options
+        itemSelector : '.blogPostCreative',
+        animationEngine : 'jquery',
+        masonry: {
+          columnWidth:292
+        }
+      });
+  });
+
+  //intialize bxslider for gallery blog post
+  (function(){
+      $('.bxsliderBlog').bxSlider({
+          auto: true,
+          pager: true,
+          controls: false
+      });
+  })();
+
+  (function(){
+  	$('ul.bxsliderBlog li img').width('1110');
+
+  })();
+
+
+
+</script>
+
+<!-- Randomizer -->
+
+<script>
+
+var retailers = [
+
+	'http://cdn.gosoundcast.com/retailers/retail14.jpg',
+
+	'http://cdn.gosoundcast.com/retailers/retail13.jpg'
+
+	]
+
+$('<img id="resizo" class="img-responsive shadow" src="' + retailers[Math.floor(Math.random() * retailers.length )] + '">').appendTo('#random');
+
+$('#resizo').height('97').width('209');
+</script>
+
+
+<!-- Media & Press Scroll to Top and Anchor Elements -->
+
+<!-- Press Page -->
+
+<script>
+(function(){
+
+
+var logophoto = [
+	{
+		title: 'Soundcast Logos',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/soundcast.png',
+		link: 'http://www.gosoundcast.com/pages/press-images'
+	},
+	{
+		title: 'Melody Logos',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/melody1.png',
+		link: 'http://www.gosoundcast.com/pages/press-images'
+	},
+	{
+		title: 'Melody',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-2.jpg',
+		link: 'http://www.gosoundcast.com/pages/press-images'
+	},
+	{
+		title: 'Boat Cabin Interior',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-boat-cabin-interior.jpg',
+		link: 'http://www.gosoundcast.com/pages/press-images'
+	}
+
+	]
+
+var template = Handlebars.compile($('#generals').html() );
+var temp = template(logophoto);
+
+$('#genz').append( template(logophoto) );
+
+	})();
+
+</script>
+
+
+
+
+
+
+
+<!-- Partner Resources -->
+
+<script>
+(function(){
+
+
+var logos = [
+	{
+		title: 'Soundcast Logos',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/soundcast.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/resources/Soundcast-logo-newtag-orange+white-2011.zip'
+	},
+	{
+		title: 'Melody Logos',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/melody1.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/resources/Melody-ID-Final.zip'
+	},
+	{
+		title: 'Icons',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/icons-th.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/resources/SCS-Melody-Features-Icons.zip'
+	},
+	{
+		title: 'Fonts',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/fonts-th.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/SCS-Melody-Fonts.zip'
+	},
+	{
+		title: 'Flags',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/flags-th.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/resources/Melody-Flags.zip'
+	},
+	{
+		title: 'Documents',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/product-th.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/resources/SCS-Melody-Short-Description-300word.docx'
+	},
+	{
+		title: 'Textures',
+		image: 'http://cdn.gosoundcast.com/partner_resources/resources/textures-th.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/resources/Melody-Textures.zip'
+	}
+
+
+		]
+
+var melody_life = [
+	{
+		title: 'With BBQ',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-bbq.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-bbq.zip'
+	},
+	{
+		title: 'In Bedroom',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-bedroom.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-bedroom.zip'
+	},
+	{
+		title: 'Boat Cabin Interior',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-boat-cabin-interior.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-boat-cabin-interior.zip'
+	},
+	{
+		title: 'Boat At Sea',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-boat-sea-explorer.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-boat-sea-explorer.zip'
+	},
+	{
+		title: 'Woman Carrying',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-female.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-female.zip'
+	},
+	{
+		title: 'On Grass',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-grass.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-grass.zip'
+	},
+	{
+		title: 'By BBQ Grill',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-green-egg-exterior.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-green-egg-exterior.zip'
+	},
+	{
+		title: 'At Parties',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-green-egg-people.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-green-egg-people.zip'
+	},
+	{
+		title: 'In Kitchen',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-kitchen-cooking.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-kitchen-cooking.zip'
+	},
+	{
+		title: 'In Living Room',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-living-room.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-living-room.zip'
+	},
+	{
+		title: 'At Picnic',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-picnic-exterior.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-picnic-exterior.zip'
+	},
+	{
+		title: 'A Picnic Toast',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-picnic-toast.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-picnic-toast.zip'
+	},
+	{
+		title: 'By the Pool',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-pool-couple.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-pool-couple.zip'
+	},
+	{
+		title: 'While Relaxing',
+		image: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-woman-reading.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/lifestyle/melody-woman-reading.zip'
+	}
+
+]
+
+var melody_product = [
+	{
+		title: 'Melody',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-2.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-2.jpg.zip'
+	},
+	{
+		title: 'Melody (trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-2-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-2-trans.png.zip'
+	},
+	{
+		title: 'Angle',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-1.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-1.jpg.zip'
+	},
+	{
+		title: 'Angle (Trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-1-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-1-trans.png.zip'
+	},
+	{
+		title: 'Side',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-3.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-3.jpg.zip'
+	},
+	{
+		title: 'Side (Trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-3-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-3-trans.png.zip'
+	},
+	{
+		title: 'Connection (Closed)',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-connection-closed.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-connection-closed.jpg.zip'
+	},
+	{
+		title: 'Connection (Opened)',
+		image:'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-connection-open.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/melody/product/melody-connection-open.jpg.zip'
+	}
+
+]
+
+var outcast_life = [
+
+	{
+		title: 'Grilling',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-bbq.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-bbq.zip'
+	},
+	{
+		title: 'On Deck',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-deck.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-deck.zip'
+	},
+	{
+		title: 'With BBQ',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-green-egg-low.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-green-egg-low.zip'
+	},
+	{
+		title: 'Illuminated Keypad',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-keypad.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-keypad.zip'
+	},
+	{
+		title: 'Living Room',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-livingroom.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-livingroom.zip'
+	},
+	{
+		title: 'With Bluecast',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-loft.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/lifestyle/outcast-loft.zip'
+	}
+
+
+]
+
+var outcast_product = [
+	{
+		title: 'OutCast',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-front.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-front.zip'
+	},
+	{
+		title: 'Front',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-front-2.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-front-2.zip'
+	},
+	{
+		title: 'Front (trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-front-2-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-front-2-trans.zip'
+	},
+	{
+		title: 'Cover',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-cover.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-cover.zip'
+	},
+	{
+		title: 'Top',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-top.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-top.zip'
+	},
+	{
+		title: 'Top (trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-top-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-top-trans.zip'
+	},
+	{
+		title: 'Bass Driver',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-bass.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-bass.zip'
+	},
+	{
+		title: 'Bass Port',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-bassport.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-bassport.zip'
+	},
+	{
+		title: 'OutCast Carried',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-carried.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-carried.zip'
+	},
+	{
+		title: 'With iCast',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-icast.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-icast.zip'
+	},
+	{
+		title: 'With UAT',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-uat.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcast/product/outcast-uat.zip'
+	}
+
+]
+
+var outcastjr_life = [
+
+	{
+		title: 'On A Boat',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-boat.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-boat.zip'
+	},
+	{
+		title: 'Out To Sea',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-boatdeck.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-boatdeck.zip'
+	},
+	{
+		title: 'On Boat Deck',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-deckexterior.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-deckexterior.zip'
+	},
+	{
+		title: 'On Porch',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-deck.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-deck.zip'
+	},
+	{
+		title: 'Couple On A Picnic',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-couple.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-couple.zip'
+	},
+	{
+		title: 'Picnic',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-picnic.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-picnic.zip'
+	},
+	{
+		title: 'With Table',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-table.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-table.zip'
+	},
+	{
+		title: 'By The Coast',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-parkbench.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-parkbench.zip'
+	},
+	{
+		title: 'Snow',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-snow.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-snow.zip'
+	},
+	{
+		title: 'Dog Approves',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-dog.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-dog.zip'
+	},
+	{
+		title: 'Snowy Tree',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-tree.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-tree.zip'
+	},
+	{
+		title: 'Living Room',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-livingroom.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-livingroom.zip'
+	},
+	{
+		title: 'Inside Loft',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-loft.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-loft.zip'
+	},
+	{
+		title: 'With Bluecast',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-bluecast-close.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/lifestyle/outcastjr-bluecast-close.zip'
+	}
+
+
+]
+
+
+var outcastjr_product = [
+
+	{
+		title: 'Outcast Jr.',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-front.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-front.jpg.zip'
+	},
+	{
+		title: 'OutCast Jr. (trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-front-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-front-trans.png.zip'
+	},
+	{
+		title: 'Top',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-top.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-top.jpg.zip'
+	},
+	{
+		title: 'Top (trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-top-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-top-trans.png.zip'
+	},
+	{
+		title: 'Bass Driver',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-bass2.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-bass2.jpg.zip'
+	},
+	{
+		title: 'Wet',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-wet.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-wet.jpg.zip'
+	},
+	{
+		title: 'With iCast',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-icast.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-icast.jpg.zip'
+	},
+	{
+		title: 'With UAT',
+		image:'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-uat.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/outcastjr/product/outcastjr-uat.jpg.zip'
+	}
+
+]
+
+var icast_life = [
+
+	{
+		title: 'iCast Espresso',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/lifestyle/icast-espresso-1.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/lifestyle/icast-espresso.zip'
+	},
+	{
+		title: 'iCast Dash',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/lifestyle/icast-dash.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/lifestyle/icast-dash.zip'
+	}
+]
+
+var icast_product = [
+
+	{
+		title: 'iCast',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-front-2.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-front-2.jpg.zip'
+	},
+	{
+		title: 'Front',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-front-1.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-front-1.jpg.zip'
+	},
+	{
+		title: 'Rear',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-rear-1.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-rear-1.jpg.zip'
+	},
+	{
+		title: 'Rear Right',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-rear-4.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-rear-4.jpg.zip'
+	},
+	{
+		title: 'Rear Left',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-rear-2.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-rear-2.jpg.zip'
+	},
+	{
+		title: 'Top Rear',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-top-2.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-top-2.jpg.zip'
+	},
+	{
+		title: 'Top Front',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-top-3.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-top-3.jpg.zip'
+	},
+	{
+		title: 'With Phone',
+		image:'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-iPhone.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/icast/product/iCast-iPhone.png.zip'
+	}
+]
+
+var uat_life = [
+
+	{
+		title: 'UAT With Computer',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/lifestyle/uat-mac-nospeaker.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/lifestyle/uat-mac-nospeaker.jpg.zip'
+	},
+	{
+		title: 'UAT and Music Library',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/lifestyle/uat-people.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/lifestyle/uat-people.jpg.zip'
+	}
+]
+
+var uat_product = [
+
+	{
+		title: 'UAT',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-front.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-front.jpg.zip'
+	},
+	{
+		title: 'Front Angle',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-front-angle-1.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-front-angle-1.jpg.zip'
+	},
+	{
+		title: 'Front Angle (trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-front-angle-1-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-front-angle-1-trans.png.zip'
+	},
+	{
+		title: 'Rear',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-rear.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-rear.jpg.zip'
+
+	},
+	{
+		title: 'Rear Angle',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-rear-angle.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-rear-angle.jpg.zip'
+	},
+	{
+		title: 'Side',
+		image:'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-side.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/uat/product/uat-side.jpg.zip'
+	}
+
+]
+
+var surround_product = [
+
+	{
+		title: 'SurroundCast',
+		image:'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-system-front.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-system-front.jpg.zip'
+	},
+	{
+		title: 'SurroundCast (trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-system-front-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-system-front-trans.png.zip'
+	},
+	{
+		title: 'Angle',
+		image:'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-receiver-front.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-receiver-front.jpg.zip'
+	},
+	{
+		title: 'Side',
+		image:'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-side.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-side.jpg.zip'
+	},
+	{
+		title: 'Side (both)',
+		image:'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-system-sides.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-system-sides.jpg.zip'
+	},
+	{
+		title: 'Bottom (receiver)',
+		image:'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-receiver-bottom.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-receiver-bottom.jpg.zip'
+	},
+	{
+		title: 'Rear',
+		image:'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-rear.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/surroundcast/product/surroundcast-rear.jpg.zip'
+	}
+
+]
+
+var subcast_life = [
+
+	{
+		title: 'SubCast on Sub',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/lifestyle/subcast-sub.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/lifestyle/subcast-sub.jpg.zip'
+	}
+]
+
+var subcast_product = [
+
+	{
+		title: 'SubCast',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-front.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-front.jpg.zip'
+	},
+	{
+		title: 'Angle',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-front-angle-1.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-front-angle-1.jpg.zip'
+	},
+	{
+		title: 'Front Angle (Trans)',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-front-angle-1-trans.png',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-front-angle-1-trans.png.zip'
+	},
+	{
+		title: 'Rear',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-rear.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-rear.jpg.zip'
+	},
+	{
+		title: 'Rear (Close)',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-rear-close.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-rear-close.jpg.zip'
+	},
+	{
+		title: 'Side',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-side.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-side.jpg.zip'
+	},
+	{
+		title: 'Side Angle',
+		image:'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-side-angle.jpg',
+		link: 'http://cdn.gosoundcast.com/partner_resources/subcast/product/subcast-side-angle.jpg.zip'
+	}
+]
+
+var template = Handlebars.compile($('#general').html() );
+var temp = template(logos);
+
+$('#gen').append( template(logos) );
+
+var melody_lifestyle = Handlebars.compile($('#m-lifestyle').html() );
+$('#melody-life').append( melody_lifestyle(melody_life) );
+
+var melody_products = Handlebars.compile($('#m-product').html() );
+$('#melody-product').append( melody_products(melody_product) );
+
+var outcast_lifestyle = Handlebars.compile($('#o-lifestyle').html() );
+$('#outcast-life').append( outcast_lifestyle(outcast_life) );
+
+var outcast_products = Handlebars.compile($('#o-product').html() );
+$('#outcast-product').append( outcast_products(outcast_product) );
+
+var outcastjr_lifestyle = Handlebars.compile($('#ojr-lifestyle').html() );
+$('#outcastjr-life').append( outcastjr_lifestyle(outcastjr_life) );
+
+var outcastjr_products = Handlebars.compile($('#ojr-product').html() );
+$('#outcastjr-product').append( outcastjr_products(outcastjr_product) );
+
+var icast_lifestyle = Handlebars.compile($('#i-lifestyle').html() );
+$('#icast-life').append( icast_lifestyle(icast_life) );
+
+var icast_products = Handlebars.compile($('#i-product').html() );
+$('#icast-product').append( icast_products(icast_product) );
+
+var uat_lifestyle = Handlebars.compile($('#u-lifestyle').html() );
+$('#uat-life').append( uat_lifestyle(uat_life) );
+
+var uat_products = Handlebars.compile($('#u-product').html() );
+$('#uat-product').append( uat_products(uat_product) );
+
+var surround_products = Handlebars.compile($('#sr-product').html() );
+$('#surround-product').append( surround_products(surround_product) );
+
+var subcast_lifestyle = Handlebars.compile($('#su-lifestyle').html() );
+$('#subcast-life').append( subcast_lifestyle(subcast_life) );
+
+var subcast_products = Handlebars.compile($('#su-product').html() );
+$('#subcast-product').append( subcast_products(subcast_product) );
+
+
+})();
+
+</script>
+
+
+<!--HANDLEBARS TEMPLATE CODE SUPPORT DOCS-->
+
+<script>
+
+(function(){
+
+
+	var surround = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/Surround_Cast_1x_450x250.jpg',
+				doc_name: 'Quick Start Guide' ,
+				doc_link: 'http://cdn.gosoundcast.com/docs/surroundcast/surroundcastquick.pdf'
+			},
+			{
+				doc_name: 'Multichannel Applications',
+				doc_link: 'http://cdn.gosoundcast.com/docs/surroundcast/multichannelapps.pdf'
+			}
+
+	]
+
+	var Melody = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/Melody_450x250.jpg',
+				doc_name: 'English Manual Espanol Francias Owners Manual' ,
+				doc_link: 'http://cdn.gosoundcast.com/docs/melody/melody_english.pdf'
+			},
+			{
+				doc_name: 'Melody Italiano Deutsch Nederlands',
+				doc_link: 'http://cdn.gosoundcast.com/docs/melody/melody_deutsch.pdf'
+			}
+
+	]
+
+	var Outcast = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/outcast_450x250.jpg',
+				doc_name: 'OutCast English Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcast/OutCast-1.2-Manual-051614-lrz.pdf"
+			},
+			{
+				doc_name: 'OutCast Spanish Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastspanish.pdf'
+			},
+			{
+				doc_name: 'OutCast French Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastfrench.pdf'
+			},
+			{
+				doc_name: 'OutCast German Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastgerman.pdf'
+			},
+			{
+				doc_name: 'OutCast Dutch Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastdutch.pdf'
+			},
+			{
+				doc_name: 'OutCast Russian Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastrussian.pdf'
+			},
+			{
+				doc_name: 'OutCast Netherlands Manual',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastnetherlands.pdf'
+			},
+			{
+				doc_name: 'OutCast Product Sheet',
+				doc_link: 'http://cdn.gosoundcast.com/docs/outcast/outcastproductsheet.pdf'
+			},
+			{
+				doc_name: 'Stereo Applications',
+				doc_link: 'http://cdn.gosoundcast.com/docs/stereoapp.pdf'
+			},
+			{
+				doc_name: 'Safety Declaration',
+				doc_link: 'http://cdn.gosoundcast.com/docs/safetydeclaration.pdf'
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Daisy Chain [Multi-Room] Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/daisychain.pdf"
+			}
+		]
+
+	var Outcastjr = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/Outcast_Jr._450x250.jpg',
+				doc_name: 'OutCast Jr English Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcastjr/outcastjreng.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr Spanish Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcastjr/outcastjrspan.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr French Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcastjr/outcastjrfrench.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr German Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcastjr/outcastjrgerman.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr Dutch Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcastjr/outcastjrdutch.pdf"
+			},
+			{
+				doc_name: 'OutCast Jr Russian Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/outcastjr/outcastjritalian.pdf"
+			},
+
+			{
+				doc_name: 'Stereo Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/stereoapp.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Daisy Chain [Multi-Room] Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/daisychain.pdf"
+			}
+
+	]
+
+	var icast = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/icast_450x250.jpg',
+				doc_name: 'iCast Transmitter Owners Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/transownersman.pdf"
+			},
+			{
+				doc_name: 'iCast Transmitter Owners Manual Europe',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/ownersmaneuro.pdf"
+			},
+			{
+				doc_name: 'RF Power Saving Mode Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/rfman.pdf"
+			},
+			{
+				doc_name: 'RF Power Saving Mode Manual Europe',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/rfeuro.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+
+			// {
+			// 	doc_name: 'Connecting Computer Speakers To The UAT',
+			// 	doc_link: "http://cdn.gosoundcast.com/docs/uat/speakersanduat.pdf"
+			// },
+			{
+				doc_name: 'Stereo applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/stereoapp.pdf"
+			},
+			{
+				doc_name: 'Surround Sound applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/icast/surroundapp.pdf"
+			},
+
+			{
+				doc_name: 'On Stage application',
+				doc_link: "http://cdn.gosoundcast.com/docs/onstageapp.pdf"
+			}
+
+	]
+
+	var UAT = [
+			{
+				doc_img: 'http://cdn.gosoundcast.com/Products/support/uta_450x250.jpg',
+				doc_name: 'UAT English Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uateng.pdf"
+			},
+			{
+				doc_name: 'UAT Spanish Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatspan.pdf"
+			},
+			{
+				doc_name: 'UAT French Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatfrench.pdf"
+			},
+			{
+				doc_name: 'UAT German Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatgerman.pdf"
+			},
+			{
+				doc_name: 'UAT Dutch Manual',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatdutch.pdf"
+			},
+			{
+				doc_name: 'Soundcast UAT 1.2&3.4 Product Sheet',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/uatprodsheet.pdf"
+			},
+			{
+				doc_name: 'Troubleshooting The UAT',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/troubleshootuat.pdf"
+			},
+			{
+				doc_name: 'Important Info For Mac Users',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/macuseralert.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+			{
+				doc_name: 'Controlling iTunes With Your iPhone/iPod Touch',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Connecting Computer Speakers To The UAT',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/speakersanduat.pdf"
+			},
+			{
+				doc_name: 'P.A. Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/uat/paapps.pdf"
+			},
+			{
+				doc_name: 'Using iTunes Remote & Soundcast Products',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunes.pdf"
+			},
+			{
+				doc_name: 'iTunes Guide',
+				doc_link: "http://cdn.gosoundcast.com/docs/itunesguide.pdf"
+			},
+
+			{
+				doc_name: 'Troubleshooting iTunes Remote',
+				doc_link: "http://cdn.gosoundcast.com/docs/troubleshootitunes.pdf"
+			},
+			{
+				doc_name: 'Daisy Chain [Multi-Room] Applications',
+				doc_link: "http://cdn.gosoundcast.com/docs/daisychain.pdf"
+			}
+
+	]
+
+	var BlueCast = [
+			{
+				doc_img: "http://70c5d3d9c7569bf4bcf7-11df018ceb91308a2f321ff34337de60.r8.cf1.rackcdn.com/Products/support/bluecast_450x250.jpg",
+				doc_name: 'English Manual Espanol Manual',
+				doc_link: "http://70c5d3d9c7569bf4bcf7-11df018ceb91308a2f321ff34337de60.r8.cf1.rackcdn.com/docs/bluecast/BlueCast Manual 062513 US-ES.pdf"
+			},
+			{
+				doc_name: 'German Manual Netherlands Manual',
+				doc_link: "http://70c5d3d9c7569bf4bcf7-11df018ceb91308a2f321ff34337de60.r8.cf1.rackcdn.com/docs/bluecast/BlueCast Manual 062513 GB-NL.pdf"
+			},
+			{
+				doc_name: 'French Manual Italian Manual',
+				doc_link: "http://70c5d3d9c7569bf4bcf7-11df018ceb91308a2f321ff34337de60.r8.cf1.rackcdn.com/docs/bluecast/BlueCast Manual 062513 FR-IT.pdf"
+			}
+	]
+
+
+	var template = Handlebars.compile( $('#template').html() );
+
+
+{% if page.handle == 'melody-docs' %}
+	var temp = template(Melody);
+	$('#support_doc').append( template(Melody) );
+
+{% elsif page.handle == 'outcast-docs' %}
+	var temp = template(Outcast);
+	$('#support_doc').append( template(Outcast) );
+
+{% elsif page.handle == 'outcastjr-docs' %}
+	var temp = template(Outcastjr);
+	$('#support_doc').append( template(Outcastjr) );
+
+{% elsif page.handle == 'uat-docs' %}
+	var temp = template(UAT);
+	$('#support_doc').append( template(UAT) );
+
+{% elsif page.handle == 'icast-docs' %}
+	var temp = template(icast);
+	$('#support_doc').append( template(icast) );
+
+{% elsif page.handle == 'surround-docs' %}
+	var temp = template(surround);
+	$('#support_doc').append( template(surround) );
+
+{% elsif page.handle == 'bluecast-docs' %}
+	var temp = template(BlueCast);
+	$('#support_doc').append( template(BlueCast) );
+
+{% endif %}
+
+
+})();
+</script>
+
+
+<script>
+
+(function(){
+
+	$('.msgs').on('click', function(){
+		$(window).bind('beforeunload', function(){
+			$('#removez').removeClass('hidden');
+		});
+	});
+
+})();
+
+
+</script>
+	<!-- Abhi's Amazing Script -->
+
+	<script>
+
+	(function(){
+
+		$('a.thumb').on('mouseover', function(){
+	    var src = $(this).attr('href');
+	    if (src != $('img#largeImg').attr('src')) {
+	        $('img#largeImg').stop().fadeOut('slow').delay(2000);
+	        $('img#largeImg').attr('src',src);
+	        $('img#largeImg').stop().fadeIn('slow');
+	    }
+    		return false;
+		});
+	})();
+	</script>
+	<!--End Script -->
+
+
+
+<script>
+jQuery(function($){
+    $('#gallery-slider a').click(function(){
+        $('#appendoimago img').fadeOut('slow').delay(2000).remove();
+        $('#image').fadeOut('slow').delay(2000).remove();
+        $('#appendoimago').append('<img src="' + $(this).attr('href') + '" alt="" style="display:none;" />');
+        $('#appendoimago img').fadeIn('slow');
+        return false;
+    });
+});
+</script>
+
+
+<!-- Site-wide Javascript -->
+<script>
+	// Extend jQuery.fn with our new method
+	jQuery.extend( jQuery.fn, {
+	    // Name of our method & one argument (the parent selector)
+	    hasParent: function(p) {
+	        // Returns a subset of items using jQuery.filter
+	        return this.filter(function(){
+	            // Return truthy/falsey based on presence in parent
+	            return $(p).find(this).length;
+	        });
+	    }
+	});
+</script>
+<script>
+	$(document).ready(function() {
+
+		var toggleWireless 	= $( '.wireless-toggle' );
+		var toggleAudio 	= $( '.audio-toggle' );
+		var toggleMobile 	= $( '.mobile-toggle' );
+		var headerLower		= $( '.header-lower' );
+		var submenuWireless = $( '.wireless-collapse' );
+		var submenuAudio 	= $( '.audio-collapse' );
+		var submenuMobile 	= $( '.mobile-collapse' );
+		var btnSearch		= $( '.btn-search' );
+
+		headerLower.mouseleave(function() {
+			if (!( headerLower.is( ":hover" ) ) ) {
+				submenuWireless.css( 'height', '0px' );
+				submenuAudio.css( 'height', '0px' );
+			}
+		});
+
+		toggleWireless.click(function(event) {
+			if ( submenuWireless.css( 'height' ) == '0px' ) {
+				submenuWireless.css( 'height', $( '.submenu-wireless .submenu-item' ).outerHeight() );
+				submenuAudio.css( 'height', '0px' );
+			}
+			else {
+				submenuWireless.css( 'height', '0px' );
+				submenuAudio.css( 'height', '0px' );
+			}
+		});
+
+		toggleAudio.click(function(event) {
+			if ( submenuAudio.css( 'height' ) == '0px' ) {
+				submenuAudio.css( 'height', $( '.submenu-audio .submenu-item' ).outerHeight() );
+				submenuWireless.css( 'height', '0px' );
+			}
+			else {
+				submenuWireless.css( 'height', '0px' );
+				submenuAudio.css( 'height', '0px' );
+			}
+		});
+
+		toggleMobile.click(function(event){
+			submenuMobile.collapse( 'toggle' );
+		});
+
+		// social carousel
+		$("#client-slider").owlCarousel({
+			responsive : false,
+			navigation : false
+		});
+
+		$('#Sound-Carousel').carousel({
+			interval: 5000,
+			pause: false
+		});
+
+		btnSearch.click(function(event) {
+			if ( btnSearch.hasClass( 'search-open' ) ) {
+				btnSearch.removeClass( 'search-open' );
+				$( '.search-input' ).css({
+					'padding': '0px',
+					'margin-left': '0px',
+					'width': '0px'
+				});
+			}
+			else {
+				btnSearch.addClass( 'search-open' );
+				$( '.search-input' ).css({
+					'padding': '0px 1em',
+					'margin-left': '1em',
+					'width': '200px'
+				});
+			}
+		});
+
+		$('.search-input').bind( 'transitionend', function(){
+			$('.search-input').focus();
+		});
+
+		//Explore Our Products Section
+		var toggleClose			= $( '#explore .preview-close span');
+		var toggleProduct1		= $( '#explore .product-1' );
+		var toggleProduct2		= $( '#explore .product-2' );
+		var toggleProduct3		= $( '#explore .product-3' );
+		var toggleProduct4		= $( '#explore .product-4' );
+		var toggleProduct5		= $( '#explore .product-5' );
+		var toggleProduct6		= $( '#explore .product-6' );
+		var toggleProduct7		= $( '#explore .product-7' );
+		var toggleProduct8		= $( '#explore .product-8' );
+		var allToggle			= $( '#explore .product' );
+		var allCollapse			= $( '.collapse-details' );
+		var parentCollapse;
+		var collapseDetails1	= $( '.collapse-details-1' );
+		var collapseDetails2	= $( '.collapse-details-2' );
+		var previewProduct1 	= $( '.product-preview-1' );
+		var previewProduct2 	= $( '.product-preview-2' );
+		var previewProduct3 	= $( '.product-preview-3' );
+		var previewProduct4 	= $( '.product-preview-4' );
+		var previewProduct5 	= $( '.product-preview-5' );
+		var previewProduct6 	= $( '.product-preview-6' );
+		var previewProduct7 	= $( '.product-preview-7' );
+		var previewProduct8 	= $( '.product-preview-8' );
+		var allPreviews			= $( '.product-preview' );
+
+		function previewCollapse( previewProduct ) {
+
+			parentCollapse = previewProduct.parents('.collapse-details');
+
+			/* Check For Active Collapse */
+			if (!parentCollapse.hasClass( 'active-collapse' )) {
+				/* Remove Class from Non-Parent Collapse */
+				allCollapse.not( parentCollapse ).removeClass( 'active-collapse' );
+				allCollapse.not( parentCollapse ).css( 'height', 0);
+
+				/* Add Class to Parent Collapse */
+				parentCollapse.addClass('active-collapse');
+
+				/* Set height based on preview height */
+				$( '.active-collapse' ).css( 'height', previewProduct.outerHeight());
+
+				/* Remove Opacity On All Other Products */
+				allPreviews.not( previewProduct ).removeClass( 'active-preview' );
+
+				/* Show Toggled Product */
+				previewProduct.addClass( 'active-preview' );
+			}
+
+			else {
+				/* Check if Product Preview is Visible */
+				if ( !previewProduct.hasClass( 'active-preview' )) {
+					allPreviews.not( previewProduct ).removeClass( 'active-preview' );
+					previewProduct.addClass( 'active-preview' );
+					$( '.active-collapse' ).css( 'height', previewProduct.outerHeight());
+				}
+
+				else {
+					/* Set Active Collapse Height to 0 */
+					$( '.active-collapse' ).css( 'height', 0);
+
+					/* From Active Collapse from All */
+					allCollapse.removeClass( 'active-collapse' );
+
+					/* Set All Preview Opacities to 0 */
+					allPreviews.removeClass( 'active-preview' );
+				}
+			}
+		}
+
+		$( window ).resize(function(event) {
+			$( '.active-collapse' ).css('height', $( '.active-preview' ).outerHeight());
+			console.log($( '.active-preview' ).outerHeight());
+		});
+
+		/* If the Close Button is Clicked */
+		toggleClose.click(function(event) {
+			/* Remove Border Effect */
+			allToggle.removeClass( 'active-product' );
+
+			/* Set Active Collapse Height to 0 */
+			$( '.active-collapse' ).css( 'height', 0);
+
+			/* From Active Collapse from All */
+			allCollapse.removeClass( 'active-collapse' );
+
+			/* Set All Preview Opacities to 0 */
+			allPreviews.removeClass( 'active-preview' );
+		});
+
+		toggleProduct1.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct1 );
+		});
+
+		toggleProduct2.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct2 );
+		});
+
+		toggleProduct3.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct3 );
+		});
+
+		toggleProduct4.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct4 );
+		});
+
+		toggleProduct5.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct5 );
+		});
+
+		toggleProduct6.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct6 );
+		});
+
+		toggleProduct7.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct7 );
+		});
+
+		toggleProduct8.click(function(event) {
+			if ($(this).hasClass('active-product')) {
+				$(this).removeClass('active-product');
+			}
+			else {
+				allToggle.removeClass( 'active-product' );
+				$(this).addClass( 'active-product' );
+			}
+			previewCollapse( previewProduct8 );
+		});
+
+		/* Product Gallery Slider */
+		var productGallery = $( '.product-gallery #gallery-slider' );
+
+		productGallery.owlCarousel({
+			items : 4,
+			pagination : false,
+			scrollPerPage: true,
+			lazyLoad: true
+		});
+
+		$( '.product-gallery .prev').click(function(event) {
+			productGallery.trigger('owl.prev');
+		});
+
+		$( '.product-gallery .next').click(function(event) {
+			productGallery.trigger('owl.next');
+		});
+	});
+
+</script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+</script>
+
+<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+
+<script>
+	$('.feature-pdp').hover(
+    function () {
+        var element = $(this);
+        var color = element.css('border-color');
+        element.addClass('feature-pdpActive');
+    }, function () {
+        var element = $(this);
+        element.css('background-color', 'transparent');
+        element.removeClass('feature-pdpActive');
+    }
+);
+</script>
+
+<script type="text/javascript">
+
+
+    var disqus_shortname = 'gosoundcast'; // required: replace example with your forum shortname
+
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+<script type="text/javascript">
+
+adroll_adv_id = "2JPMS5BEXJEBBNYHVHSSI2";
+
+adroll_pix_id = "PG3OGKCJHBBORAVBHHSSAM";
+
+(function () {
+
+var oldonload = window.onload;
+
+window.onload = function(){
+
+__adroll_loaded=true;
+
+var scr = document.createElement("script");
+
+var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" :
+
+"http://a.adroll.com");
+
+scr.setAttribute('async', 'true');
+
+scr.type = "text/javascript";
+
+scr.src = host + "/j/roundtrip.js";
+
+((document.getElementsByTagName('head') || [null])[0] ||
+
+document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+
+if(oldonload){oldonload()}};
+
+}());
+
+</script>
+</body>
+</html>

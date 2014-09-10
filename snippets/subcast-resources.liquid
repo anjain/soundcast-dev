@@ -1,0 +1,66 @@
+						<a id="resources-subcast" class="section-anchor"></a>
+						<section id="resources-subcast-collapse" class="resources resources-subcast">
+							<header class="subsection-header clearfix">
+								<h1 class="subsection-title">
+									<a data-toggle="collapse" data-parent="#resources-subcast-collapse" href="#subcast-section" class="collapsed">SubCast <i class="fa fa-caret-down"></i></a>
+								</h1>
+							</header>
+							<div id="subcast-section" class="collapse resources-collapse">
+								<section class="resources-section">
+									
+									<header class="subsection-header clearfix">
+										<h1 class="subsection-title">Lifestyle Photography</h1>
+									</header>
+									<ul class="row" id="subcast-life">
+									{% raw %}
+										<script id="su-lifestyle" type="text/x-handlebars-template">
+										{{#each this}}
+											<li class="resource col-xs-6 col-sm-3">
+												<div class="thumbs">
+													<div class="thumb-wrapper">
+														<img src="{{image}}">
+													</div>
+													<a href="{{link}}">
+														<span class="title">
+															<span><i class="fa fa-cloud-download fa-2x"></i></span>
+														</span>
+													</a>
+													<p>{{title}}</p>
+												</div>
+											</li>
+										{{/each}}
+										</script>
+									{% endraw %}
+									</ul>
+								</section>
+
+								<section class="resources-section">
+									
+									<header class="subsection-header clearfix">
+										<h1 class="subsection-title">Product Photography</h1>
+									</header>
+									<ul class="row" id="subcast-product">
+									{% raw %}
+										<script id="su-product" type="text/x-handlebars-template">
+										{{#each this}}
+											<li class="resource col-xs-6 col-sm-3">
+												<div class="thumbs">
+													<div class="thumb-wrapper">
+														<img src="{{image}}">
+													</div>
+													<a href="{{link}}">
+														<span class="title">
+															<span><i class="fa fa-cloud-download fa-2x"></i></span>
+														</span>
+													</a>
+													<p>{{title}}</p>
+												</div>
+											</li>
+										{{/each}}
+										</script>
+									{% endraw %}
+
+									</ul>
+								</section>
+							</div>
+						</section><!-- /.resources-subcast -->

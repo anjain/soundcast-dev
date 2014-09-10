@@ -1,0 +1,9 @@
+
+<div class="row">
+{% for article in blogs["2013"].articles limit:3 %}
+	<div class="col-sm-4">
+		<p>{{ article.published_at | date: '%m.%d.%y' }}</p>
+		<a href="{{article.excerpt}}"><h4 class="white">{{ article.title }}</h4></a>
+	</div>
+{% endfor %}
+</div>

@@ -1,0 +1,47 @@
+                <div class="cart-collaterals" style="border-top: 1px solid #DDD; padding: 2em 0px;">
+                        <div class="col-md-6">
+                            <div id="checkout-addnote" class="last">
+                                <div class="wrapper-title">
+                                <span class="title-3">Add a note to your order (Optional)</span>
+                                <span class="line"></span>
+                              </div>
+                              <textarea id="note" rows="5" class="form-control" name="note">{{ cart.note }}</textarea>
+                            </div>
+                        </div>
+                        <div class="totals col-md-6 righto">
+                            <div class="container">
+                                <div class="totals-wrapper" style="padding: 1em; background: #DDD; margin-bottom: 2em">
+                                    <table id="shopping-cart-totals-table" style="width: 100%" class="table-responsive">
+                                        <colgroup><col>
+                                        <col width="1">
+                                        </colgroup>
+                                        <tfoot>
+                                            <tr>
+                                                <td style="" class="a-right" colspan="1">
+                                                    <strong>Grand Total</strong>
+                                                </td>
+                                                <td style="" class="a-right">
+                                                    <strong><span class="price">{{cart.total_price | money}}</span></strong>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td style="" class="a-right" colspan="1">Subtotal</td>
+                                                <td class="a-right">
+                                                    <span class="price">{{cart.total_price | money}}</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="checkout-types pull-right">
+                                    <li>
+                                       <button name="checkout" value="Check out" type="submit" id="checkout" title="Checkout" class="btn btn-checkout">
+                                        <span><span>Checkout <i class="fa fa-credit-card"></i></span></span>
+                                    </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>

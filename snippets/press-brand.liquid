@@ -1,0 +1,21 @@
+<div ng-controller="pressCtrl" ng-cloak>
+	<div class="container nopadding">
+		<div class="row">
+			{% raw %}
+			<div id="press-item" ng-repeat="brand in brands" class="col-sm-3 nopadding text-center">
+				<img src="{{brand.image}}" class="img-thumbnail" alt="" style="width: 258px; height: 228px;">
+
+				<br>
+				<p class="text-letter">{{ item.title }}</p>
+				<div id="pressdl" class="row text-center">
+					<div class="col-sm-6">
+						<a href="{{brand.download}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> View<small></small></a>
+					</div>
+				</div>
+				<br>
+			</div>
+
+			{% endraw %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+<section id="reviews">
+		<br />
+		<div class="container hidden-xs" ng-controller="reviewsCtrl">
+			<div class="row">
+				<div class="section-subheading-support">
+					<h1 class="section-title">Professional Reviews</h1>
+				</div>
+				<hr />
+			</div>
+
+			{% raw %}
+				<div class="row" ng-repeat="review in reviews" ng-cloak>
+					<div class="col-md-2 col-sm-2"><a href="{{review.original_url}}" target="_blank"><img src="{{review.company_logo}}" alt="{{review.company}}" /></a></div>
+					<div class="col-md-10 col-sm-10 md_desc">
+						<p class="lead text-center pada"><a ng-click="open(review)">
+							{{review.preview_text}}</a></p>
+						<p class="pull-right"><span ng-if="review.author != ''">-</span> {{review.author}}<span ng-if="review.website != '' && review.author != ''">, </span><a href="{{review.website}}" target="_blank">{{review.company}}</a></p>
+					</div>
+				</div>
+
+
+
+    <script type="text/ng-template" id="myModalContent.html">
+
+        <div class="modal-body">
+					<button class="btn btn-danger pull-right" ng-click="cancel()">X</button>
+					<br><br>
+					<div class="col-sm-12">
+						<div class="vendor">
+
+								 <iframe ng-src="{{pdfSrc(selected.reviews_link)}}" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<p class="pull-right"><span ng-if="selected.author != ''">-</span> {{selected.author}}<span ng-if="selected.website != '' && selected.author != ''">, </span><a href="{{selected.website}}" target="_blank">{{selected.company}}</a></p>
+				</div>
+
+    </script>
+
+{% endraw %}
+
+		</div>
+			<!-- Container -->
+
+			<!--hidden xs-->

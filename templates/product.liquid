@@ -1,0 +1,65 @@
+
+{% if product.tags contains 'acc' %}
+
+{% include '404' %}
+
+{% else %}
+{% include 'block' %}
+
+{% if product.title == 'Melody' %}
+{% include 'awards-melody' %}
+{% include 'video-melody' %}
+{% endif %}
+
+{% if product.title contains 'OutCast' %}
+{% include 'awards-outcast' %}
+{% endif %}
+
+{% if product.title == 'iCast' %}
+{% include 'awards-icast' %}
+{% endif %}
+
+
+
+{% if product.tags contains 'no-rel' %}
+{% include 'related-pdp' %}
+{% elsif product.tags contains 'rel' %}
+{% include 'related-pdp' %}
+{% elsif product.title == 'SubCast' %}
+{% include 'related-sub-pdp' %}
+{% elsif product.title == 'SurroundCast' %}
+{% include 'related-surr-pdp' %}
+{% endif %}
+
+
+
+{% include 'features-block' %}
+
+{% if product.title == 'Melody' %}
+{% include 'unboxed' %}
+
+
+{% comment %}
+{% elsif product.title == 'OutCast' %}
+{% include 'review-outcast-old' %}
+{% endcomment %}
+
+{% endif %}
+{% endif %}
+
+
+
+
+<div id="reviews-bottom">
+
+
+	<div class="container">
+		<div class="boxy">
+			<h1 class="section-title"> REVIEWS </h1>
+			<div class="col-xs-12">
+			<div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+
+			</div>
+		</div>
+	</div>
+</div>

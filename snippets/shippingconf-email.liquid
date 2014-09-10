@@ -1,0 +1,107 @@
+<html style="background-color: rgb(203,203,203)">
+
+<body style="width: 600px !important; height: 660px !important; background-color: rgb(255,255,255); ">
+
+	<span style="background-color: rgb(255,255,255)">
+
+		<a style="text-align: center" align="center" href="http://www.gosoundcast.com"><img src="{{ 'soundcastbanner.jpg' | asset_url }}"></a>
+
+		<br>
+
+		{% if billing_address.name %}
+			<p style="margin-left: 25px;">Dear {{ billing_address.name }},</p>
+		{% endif %}
+
+		<p style="margin-left: 25px;">Your order from Soundcast has shipped! You're one step closer to enjoying great music in the great outdoors.</p>
+
+		<p style="margin-left: 25px;">We're happy to report that your order (#9999) was shipped via UPS on (date). You can track your package at any time using the link below. </p>
+
+		<ul style="padding-left:0; margin-left: 25px;"><strong>Shipped to:</strong>
+			<li style="margin-left: 25px; list-style-type: none;">{{ shipping_address.name }}</li>
+			<li style="margin-left: 25px; list-style-type: none;">{{ shipping_address.street }}</li>
+			<li style="margin-left: 25px; list-style-type: none;">{{ shipping_address.city }}</li>
+			<li style="margin-left: 25px; list-style-type: none;">{{ shipping_address.province }}</li>
+			<li style="margin-left: 25px; list-style-type: none;">{{ shipping_address.zip }}</li>
+		</ul>
+
+		{% if requires_shipping %}
+
+			{% if fulfillment.tracking_numbers.size > 0 %}
+
+				{% if fulfillment.tracking_numbers.size == 1 %}
+
+					<p style="margin-left: 25px;"><strong>Track your shipment:</strong> {{ fulfillment.tracking_numbers.first }}.</p>
+
+				{% else %}
+
+					<p style="margin-left: 25px;">The tracking details for these items are as follows:</p>
+
+					{% for tracking_number in fulfillment.tracking_numbers %}
+
+						{{ tracking_number }}
+					{% endfor %}
+
+					<p style="margin-left: 25px;">Click the links below for shipping status on these items:</p>
+
+					{% for tracking_url in fulfillment.tracking_urls %}
+
+						<a href="{{ tracking_url }}">{{ tracking_url }}</a>
+
+					{% endfor %}
+
+				{% endif %}
+
+			{% endif %}
+
+		{% endif %}
+
+		<p style="margin-left: 25px;">
+			<u> Item # &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;   &nbsp;&nbsp;  Description&nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Quantity
+			</u>
+		</p>
+
+		{% for line in fulfillment.fulfillment_line_items %}
+			<p style="margin-left: 25px;">{{ line.line_item.sku }}&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;{{ line.line_item.title }}&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {{ line.quantity }}</p>
+		{% endfor %}</p>
+
+		<p style="margin-left: 25px;">Thank you for ordering from {{ shop_name }}!</p>
+
+
+<!--- FOOTER -->
+<div style="background-color: rgb(236,236,236)">
+
+<br>
+
+	<div style="text-align:center" align="center"><span style="font-size:10pt"><strong>Thank you again and don't forget to follow Soundcast on social media</strong></span></div>
+
+	<div style="text-align:center" align="center"><strong>for the latest offers, news, and how-to's!</strong></div>
+
+<br>
+
+	<div style="text-align:center" align="center">
+
+		<a style="font-size:10pt" href="https://www.facebook.com/SoundcastSystems"  target="_blank"><img style="height:30px; width: 30px;" src="{{ 'facebook-email.png' | asset_url }}"</a>
+
+		<a style="font-size:10pt" href="http://instagram.com/soundcast" target="_blank"><img style="height:30px; width: 30px;" src="{{ 'instagram-email.png' | asset_url }}"></a>
+
+		<a style="font-size:10pt" href="https://twitter.com/soundcast360" target="_blank"><img style="height:30px; width: 30px;" src="{{ 'twitter-email.png' | asset_url }}"></a>
+
+		<a style="font-size:10pt" href="http://www.pinterest.com/soundcast" shape="rect" target="_blank"><img style="height:30px; width: 30px;" src="{{ 'pinterest-email.png' | asset_url }}"></a>
+
+	</div>
+
+	<p style="margin-left: 25px;">LIKE on Facebook: <a href="www.facebook.com/SoundcastSystems" target="_blank"> www.facebook.com/SoundcastSystems </a></p>
+
+	<p style="margin-left: 25px;">Love on Instagram: <a href="www.instagram.com/Soundcast" target="_blank"> www.instagram.com/Soundcast</a></p>
+
+	<p style="margin-left: 25px;">Tweet on Twitter: <a href="www.twitter.com/goSoundcast" target="_blank"> www.twitter.com/goSoundcast </a></p>
+
+	<p style="margin-left: 25px;">Pin on Pinterest: <a href="www.pinterest.com/Soundcast" target="_blank"> www.pinterest.com/Soundcast </a></p>
+
+<br>
+
+</div>
+
+</span>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html style="background-color: rgb(203,203,203)">
+	<body style="width: 600px !important; height: 582px !important; background-color: rgb(255,255,255);">
+		<span style="background-color: rgb(255,255,255)">
+			<a style="text-align:center" align="center" href="http://www.gosoundcast.com"><img src="{{ 'soundcastbanner.jpg' | asset_url }}"></a>
+
+			{% if billing_address.name %}
+
+				<p style="text-indent: 25px;">Dear {{ billing_address.name }},</p>
+
+			{% endif %}
+
+			<p style="text-indent: 25px;">The following shipped items from order {{ name }} have been updated with new shipping information:</p>
+			<p style="text-indent: 25px;">
+				<u> Item # &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;   &nbsp;&nbsp;  Description&nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Quantity </u>
+			</p>
+			<p style="text-indent: 25px;">
+				{% for line in fulfillment.fulfillment_line_items %}
+					{{ line.line_item.sku }}&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;{{ line.line_item.title }}&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {{ line.quantity }}
+				{% endfor %}
+			</p>
+			<p style="text-indent: 25px;">Please allow some time for the status of the shipment to correctly display at the below address.</p>
+
+			<ul style="padding-left:0; text-indent: 25px;"><strong>Shipped to:</strong>
+				<li style="text-indent: 50px; list-style-type: none;">{{ shipping_address.name }}</li>
+				<li style="text-indent: 50px; list-style-type: none;">{{ shipping_address.street }}</li>
+				<li style="text-indent: 50px; list-style-type: none;">{{ shipping_address.city }}</li>
+				<li style="text-indent: 50px; list-style-type: none;">{{ shipping_address.province }}</li>
+				<li style="text-indent: 50px; list-style-type: none;">{{ shipping_address.zip }}</li>
+			</ul>
+
+			<p style="padding-left: 25px;"> Thank you for ordering from Soundcast </p>
+
+<!--- FOOTER -->
+<div style="background-color: rgb(236,236,236)">
+
+<br>
+
+	<div style="text-align:center" align="center"><span style="font-size:10pt"><strong>Thank you again and don't forget to follow Soundcast on social media</strong></span></div>
+
+	<div style="text-align:center" align="center"><strong>for the latest offers, news, and how-to's!</strong></div>
+
+<br>
+
+	<div style="text-align:center" align="center">
+
+		<a style="font-size:10pt" href="https://www.facebook.com/SoundcastSystems"  target="_blank"><img style="height:30px; width: 30px;" src="{{ 'facebook-email.png' | asset_url }}"</a>
+
+		<a style="font-size:10pt" href="http://instagram.com/soundcast" target="_blank"><img style="height:30px; width: 30px;" src="{{ 'instagram-email.png' | asset_url }}"></a>
+
+		<a style="font-size:10pt" href="https://twitter.com/soundcast360" target="_blank"><img style="height:30px; width: 30px;" src="{{ 'twitter-email.png' | asset_url }}"></a>
+
+		<a style="font-size:10pt" href="http://www.pinterest.com/soundcast" shape="rect" target="_blank"><img style="height:30px; width: 30px;" src="{{ 'pinterest-email.png' | asset_url }}"></a>
+
+	</div>
+
+	<p style="margin-left: 25px;">LIKE on Facebook: <a href="www.facebook.com/SoundcastSystems" target="_blank"> www.facebook.com/SoundcastSystems </a></p>
+
+	<p style="margin-left: 25px;">Love on Instagram: <a href="www.instagram.com/Soundcast" target="_blank"> www.instagram.com/Soundcast</a></p>
+
+	<p style="margin-left: 25px;">Tweet on Twitter: <a href="www.twitter.com/goSoundcast" target="_blank"> www.twitter.com/goSoundcast </a></p>
+
+	<p style="margin-left: 25px;">Pin on Pinterest: <a href="www.pinterest.com/Soundcast" target="_blank"> www.pinterest.com/Soundcast </a></p>
+
+<br>
+
+</div>
+
+</span>
+</body>
+</html>

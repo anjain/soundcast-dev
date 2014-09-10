@@ -1,0 +1,16 @@
+var settings = {
+    uid: "a07ae17acd8bc59b068e4df3440c8b12", 
+    huid: "168513",
+    source: "Shopify"{% if customer  %},
+    vid: "{{ customer.id }}"{% endif %},
+    options: {}    , 
+    token: {timestamp: 1397758303, token: "d9b6678b7ffd624cd052b60262eef6d4"} 
+};
+
+var ratingSettings = {
+    title: "{{ product.title | escape }}",
+    url: "{{ page.url }}",
+    domain: "{{ shop.permanent_domain | escape }}",
+    img: "{{ product.featured_image | product_img_url: 'large'  |replace: '?', '%3F' | replace: '&','%26'}}",
+    tags: "{% for tag in product.tags %}{{ tag | escape }};{% endfor %}"
+};

@@ -1,0 +1,26 @@
+			<div class="container visible-xs" ng-controller="reviewsCtrl">
+				<div class="row">
+					<div class="section-subheading-support">
+						<h1 class="section-title">Professional Reviews</h1>
+					</div>
+					<hr />
+				</div>
+				{% raw %}
+				<div class="row" ng-repeat="review in reviews" ng-cloak>
+						<div class="col-xs-4">
+							<img src="{{review.company_logo}}" alt="{{review.company}}" />
+						</div>
+						<div class="col-xs-8">
+							<p class="lead pads">
+								<a href="{{review.reviews_link}}" target="_blank">
+									{{review.preview_text | truncate: 60}}
+								</a>
+							</p>
+						</div>
+				</div>
+				{% endraw %}
+			</div>
+				<br />
+			</div>
+		</section><!-- second -->
+			<!-- visible-xs -->

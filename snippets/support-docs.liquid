@@ -1,0 +1,18 @@
+
+	{% raw %}
+	<script id="template" type="text/x-handlebars-template">
+			<div class="row">
+			{{#each this}}	
+				<div class="col-sm-4 col-sm-offset-2 col-xs-12">{{#if doc_img}}<img src="{{ doc_img }}" alt="" />{{/if}}</div>
+				<div class="col-sm-6 col-xs-12">
+						<p class="text-center la"><a href=" {{ doc_link }}"> {{ doc_name }}</a></p>
+					
+				</div>
+			{{/each}}
+			</div>
+					
+	</script>
+	{% endraw %}
+
+
+	

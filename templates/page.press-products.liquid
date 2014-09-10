@@ -1,0 +1,152 @@
+<div id="page-body" ng-controller="pressCtrl" ng-cloak>
+
+	<div class="container">
+
+		<h1 class="section-title black">{{page.title}}</h1>
+		<br>
+
+		<div class="col-sm-12 text-center">
+		{% case handle %}
+			{% when 'press-melody' %}
+				{%raw%}
+				<img src={{img.melody}} class="img-thumbnail"/>
+				{%endraw%}
+			{% when 'press-outcast-jr' %}
+				{%raw%}
+				<img src={{img.outcastjr}} class="img-thumbnail"/>
+				{%endraw%}
+			{% when 'press-outcast' %}
+				{%raw%}
+				<img src={{img.outcast}} class="img-thumbnail"/>
+				{%endraw%}
+			{% when 'press-bluecast' %}
+				{%raw%}
+				<img src={{img.bluecast}} class="img-thumbnail"/>
+				{%endraw%}
+			{% when 'press-uat' %}
+				{%raw%}
+				<img src={{img.uat}} class="img-thumbnail"/>
+				{%endraw%}
+			{% when 'press-icast' %}
+				{%raw%}
+				<img src={{img.icast}} class="img-thumbnail"/>
+				{%endraw%}
+			{% when 'press-surroundcast' %}
+				{%raw%}
+				<img src={{img.surroundcast}} class="img-thumbnail"/>
+				{%endraw%}
+			{% when 'press-subcast' %}
+				{%raw%}
+				<img src={{img.subcast}} class="img-thumbnail"/>
+				{%endraw%}
+			{% else %}
+		{% endcase %}
+		</div>
+
+	<div class="buttons_row">
+		{% case handle %}
+			{% when 'press-melody' %}
+				{%raw%}
+				<div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% when 'press-outcast-jr' %}
+				{%raw%}
+            <div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% when 'press-outcast' %}
+				{%raw%}
+            <div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% when 'press-bluecast' %}
+				{%raw%}
+            <div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% when 'press-uat' %}
+				{%raw%}
+            <div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% when 'press-icast' %}
+				{%raw%}
+            <div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% when 'press-surroundcast' %}
+				{%raw%}
+            <div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% when 'press-subcast' %}
+				{%raw%}
+            <div class="row text-center">
+		            <div class="col-sm-6 text-right">
+		                <a href="#" target="_blank" class="btn btn-default">Download Lo-Res<small></small></a>
+		            </div>
+		            <div class="col-sm-6 text-left">
+		                <a href="#" target="_blank" class="btn btn-default">Download Hi-Res<small></small></a>
+		            </div>
+		        </div>
+		        <br>
+				{%endraw%}
+			{% else %}
+		{% endcase %}
+		</div>
+
+        </div>
+	</div>
+
+
+</div>

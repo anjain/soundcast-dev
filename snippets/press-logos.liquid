@@ -1,0 +1,33 @@
+
+<div ng-controller="pressCtrl" ng-cloak>
+	<div class="container nopadding">
+		<div class="row">
+			{% raw %}
+			<div id="press-item" ng-repeat="box in boxs" class="col-sm-3 nopadding text-center">
+				<img src="{{box.image}}" class="img-thumbnail" alt="">
+
+				<br>
+				<p class="text-letter">{{ item.title }}</p>
+				<div id="pressdl" class="row text-center hidden-xs">
+						<div class="col-sm-6 text-right">
+							<a href="{{box.low}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Lo-Res<small></small></a>
+						</div>
+						<div class="col-sm-6 text-left">
+							<a href="{{box.high}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Hi-Res<small></small></a>
+						</div>
+				</div>
+				<div id="pressdl" class="row visible-xs">
+						<div class="col-xs-6">
+							<a href="{{box.low}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Lo-Res<small></small></a>
+						</div>
+						<div class="col-xs-6">
+							<a href="{{box.high}}" target="_blank" class=""><i class="fa fa-cloud-download"></i> Hi-Res<small></small></a>
+						</div>
+				</div>
+				<br>
+			</div>
+
+			{% endraw %}
+		</div>
+	</div>
+</div>

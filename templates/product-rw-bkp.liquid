@@ -1,0 +1,49 @@
+
+{% if product.tags contains 'acc' %}
+
+{% include '404' %}
+
+{% else %}
+{% include 'block' %}
+
+{% if product.title == 'Melody' %}
+{% include 'awards-melody' %}
+{% endif %}
+
+{% if product.title == 'OutCast' %}
+{% include 'related-pdp' %}
+{% elsif product.title == 'OutCast Jr.' %}
+{% include 'related-pdp' %}
+{% elsif product.title == 'SubCast' %}
+{% include 'related-sub-pdp' %}
+{% elsif product.title == 'SurroundCast' %}
+{% include 'related-surr-pdp' %}
+{% endif %}
+
+{% include 'features-block' %}
+
+{% if product.title == 'Melody' %}
+{% include 'unboxed' %}
+{% include 'review-old' %}
+
+{% comment %}
+{% elsif product.title == 'OutCast' %}
+{% include 'review-outcast-old' %}
+{% endcomment %}
+
+{% endif %}
+{% endif %}
+
+<div id="reviews-bottom">
+	<div class="container">
+		<div class="boxy">
+			<h1 class="section-title"> REVIEWS </h1>
+			<div class="col-xs-12" id="disqus">
+				<script src="https://soundcast.myshopify.com/tools/disqus/disqus_code.php?n=gosoundcast"></script>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

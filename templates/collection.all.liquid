@@ -1,0 +1,77 @@
+<div id="page-body">
+<div class="hidden-xs">
+<div class="catalog-category-view">
+	<div class="category-products container">
+		<ul class="products-grid" style="list-style: none; padding: 0px">
+			<div class="products-group">
+				{% for product in collections.all-products.products %}
+					<li class="product text-center">
+					                 {% if product.tags contains 'sale' %}
+                        <div class="sales smallGrey sale">SALE</div>
+                        {% elsif product.available %}
+                        {% else %}
+                        <div class="sales smallGrey sale">SOLDOUT</div>
+                        {% endif %}
+	                	<img class="img-thumbnail img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="product">
+		                <h1 class="product-name">
+		                    <a style="text-decoration: none" href="{{ product.url}}" title="Melody">
+		                        {{ product.title }}
+		                    </a>
+		                </h1>
+	                	<div class="row action">
+		                    <div class="col-md-6 text-right">
+		                        <div class="price-box">
+		                            <h2 class="regular-price" id="product-price-1">
+		                                <span class="price">{{product.price | money }}</span>
+		                            </h2>
+		                        </div>
+		                    </div>
+		                    <div class="col-md-6 category-button">
+		                        <a href="{{product.url}}" type="button" title="View Item" class="btn btn-submitreview">
+		                            View Item <span class=""></span>
+		                        </a>
+		                    </div>
+	                	</div>
+	            	</li>
+				{% endfor %}
+			</div>
+		</ul>
+	</div>
+</div>
+</div>
+
+<div class="visible-xs">
+<div class="catalog-category-view">
+	<div class="category-accessories container">
+		<ul class="products-grid" style="list-style: none; padding: 0px">
+			<div class="products-group">
+				{% for product in collections.all-products.products %}
+					<li class="product text-center">
+	                	<img class="img-thumbnail img-responsive" src="{{ product.featured_image | product_img_url: 'medium' }}" alt="product">
+		                <h1 class="product-name">
+		                    <a style="text-decoration: none" href="{{ product.url}}" title="Melody">
+		                        {{ product.title }}
+		                    </a>
+		                </h1>
+	                	<div class="row action">
+		                    <div class="col-xs-6 text-right">
+		                        <div class="price-box">
+		                            <h2 class="regular-price" id="product-price-1">
+		                                <span class="price">{{product.price | money }}</span>
+		                            </h2>
+		                        </div>
+		                    </div>
+		                    <div class="col-xs-6 category-button">
+		                        <a href="{{product.url}}" type="button" title="View Item" class="btn btn-submitreview">
+		                            View Item <span class=""></span>
+		                        </a>
+		                    </div>
+	                	</div>
+	            	</li>
+				{% endfor %}
+			</div>
+		</ul>
+	</div>
+</div>
+</div>
+</div>

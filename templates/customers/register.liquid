@@ -1,0 +1,83 @@
+{% layout settings.customer_layout %}
+<br>
+<br>
+<br>
+
+
+            <div id="page-body">
+                <div class="container">
+    				<div id="account-create">
+				        <div class="page-title">
+				            <h1>Create an Account</h1>
+				             <hr>
+							{% form 'create_customer' %}
+                            <input type="hidden" name="return_to" value="/cart" />
+								{{ form.errors | default_errors }}
+
+								<ul class="form-list">
+                    				<li class="fields">
+                        				<div class="customer-name">
+										    <div class="field name-firstname row">
+										        <label for="firstname" class="required col-xs-4 email_label_login"><em>*</em>First Name</label>
+										        <div class="input-box col-xs-8">
+                        							<input type="text" value="" name="customer[first_name]" id="first_name" maxlength="255" class="input-text required-entry"  />
+                        						</div>
+                        					</div>
+                        				</div>
+                        			</li>
+                   					<li class="fields">
+                        				<div class="customer-name">
+										    <div class="field name-firstname row">
+										        <label for="lastname" class="required col-xs-4 email_label_login"><em>*</em>Last Name</label>
+										        <div class="input-box col-xs-8">
+                        							<input type="text" value="" name="customer[last_name]" id="last_name" maxlength="255" class="input-text required-entry" />
+                        						</div>
+                        					</div>
+                        				</div>
+                        			</li>
+                   					<li class="fields">
+                        				<div class="customer-name">
+										    <div class="field name-firstname row">
+										        <label for="email" class="required col-xs-4 email_label_login"><em>*</em>Email Addresses</label>
+										        <div class="input-box col-xs-8">
+                        							<input  type="email" value="" name="customer[email]" id="email" maxlength="255" class="input-text required-entry" />
+                        						</div>
+                        					</div>
+                        				</div>
+                        			</li>
+                   					<li class="fields">
+                        				<div class="customer-name">
+										    <div class="field name-firstname row">
+										        <label for="email" class="required col-xs-4 email_label_login"><em>*</em>Password</label>
+										        <div class="input-box col-xs-8">
+                        							<input type="password" value="" name="customer[password]" id="password" class="input-text required-entry" />
+                        						</div>
+                        					</div>
+                        				</div>
+                        				<p class="required text-center">* Required Fields</p>
+                        			</li>
+
+
+                        		</ul>
+        <div class="col-xs-12 text-center">
+            <div class="buttons-set">
+                <p class="back-link"><a href="/account/login/" class="back-link"><small>&laquo; </small>Back</a></p>
+                <button type="submit" title="Submit" class="button"><span><span>Submit</span></span></button>
+                <br />
+            </div>
+							{% endform %}
+                            <br>
+                            <br>
+                            <br>
+
+
+
+
+
+
+
+				        </div>
+				    </div>
+				</div>
+			</div>
+

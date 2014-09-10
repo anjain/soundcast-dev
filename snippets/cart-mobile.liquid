@@ -1,0 +1,72 @@
+<div class="container">
+	{% for item in cart.items %}
+<div class="row">
+	<div class="col-xs-12 text-center">
+		<h3>{{ item.product.title}}</h3>
+		
+
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 text-center">
+
+			
+			<img src="{{ item.product.featured_image.src | product_img_url: 'medium' }}" class="img-thumbnail">
+
+
+		
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-xs-6 text-right">
+		<h4>PRICE</h4>
+
+	</div>
+	<div class="col-xs-6">
+		<h4>{{item.product.price | money }}</h4>
+
+	</div>	
+</div>
+<div class="row">
+	<div class="col-xs-6 text-right">
+		<h4>QUANTITY</h4>
+
+	</div>
+	<div class="col-xs-6">
+		<h4 style="display: inline;"><input name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-min="" data-max="0" title="Qty" maxlength="12" class="cart-width" size="1" /></h4>                      
+		<button type="submit" id="update-cart" class="btn btn-link" name="update" value="Update" /> <span><span><span class="fa fa-refresh"></span></span></span></button> 
+
+	</div>	
+</div>
+<div class="row">
+	<div class="col-xs-6 text-right">
+		<h4>SUBTOTAL</h4>
+
+	</div>
+	<div class="col-xs-6">
+		<h4 class="text-left">{{ item.line_price | money }}</h4>
+	</div>	
+</div>
+<hr>
+	{% endfor %}
+
+<div class="row">
+	<div class="col-xs-12 text-center">
+		<h4>ORDER SUMMARY</h4>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-xs-6 text-right">
+		<h4>SUBTOTAL</h4>
+	</div>
+	<div class="col-xs-6">
+		<h4>{{cart.total_price | money}}</h4>
+	</div>
+</div>
+
+</div>
+
+

@@ -1,0 +1,209 @@
+
+<header id="page-header" class="navbar-fixed-top">
+
+    <div class="header-upper clearfix">
+
+        <div class="upper-wrapper clearfix">
+          {% unless page.handle == 'fitness' %}
+            <div class="branding clearfix">
+                <a href="/">
+                    <img src="http://cdn.gosoundcast.com/Navbar/small-logo.png">
+                </a>
+            </div>
+            <nav class="store-nav clearfix">
+                <ul class="store-links clearfix">
+                    <li class="store-link store-link-1 store-link-toggle">
+                        <a class="mobile-toggle" href="#"><span class="fa fa-list"></span></a>
+                    </li>
+
+                            {% if customer %}
+                                <li class="store-link store-link-2 store-link-user">
+                                    <a href="/account"><span class="fa fa-user"></span></a>
+                                </li>
+                            {% else %}
+                                <li class="store-link store-link-2 store-link-user">
+                                    <a href="/account/login"><span class="fa fa-user"></span></a>
+                                </li>
+                            {% endif %}
+
+                    <li class="store-link store-link-3 store-link-shoppingcart">
+                        <a href="/cart"><span class="fa fa-shopping-cart"><span class="count"> {{ cart.item_count }}</span></span></a>
+                    </li>
+                    <li class="store-link store-link-4 store-link-search">
+                            <form action="/search" method="get" role="search">
+                                <ul class="search-form">
+                                    <li>
+                                        <label for="search" class="searchbar">
+
+                                            <img src="{{'search.png' | asset_url}}" alt="search" />
+                                        </label>
+                                    </li>
+                                    <li><input type="ser" name="q" id="search" placeholder="Search"></li>
+                                </ul>
+                            </form>
+                    </li>
+                </ul>
+                <div class="pull-right hidden-xs">
+                    {% include 'social-nav' %}
+                </div>
+            </nav>
+            {% endunless %}
+        </div>
+        <div class="mobile-collapse-wrapper clearfix">
+            <ul class="submenu mobile-collapse collapse clearfix">
+                <!-- <li class="submenu-item clearfix">
+                    <a class="menu-link" href="#"><span>HOME</span>
+                        <div class="pull-right">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                </li> -->
+                <li class="submenu-item clearfix">
+                    <form class="search_mini_form" action="/search" method="get" role="search">
+                        <div class="input-append">
+                            <input type="text" id="search" name="q" class="input-text search-input" maxlength="128" placeholder="Search">
+                            <a class="btn btn-search"><span class="fa fa-search"></span></a>
+                            <button type="submit" style="visibility: hidden; position: absolute"></button>
+                        </div>
+                    </form>
+                </li>
+
+                <li class="submenu-item clearfix">
+                    <a class="menu-link" href="/collections/all-products"><span>PRODUCTS</span>
+                        <div class="pull-right">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="submenu-item clearfix">
+                    <a class="menu-link" href="/collections/accessories"><span>ACCESSORIES</span>
+                        <div class="pull-right">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="submenu-item clearfix">
+                    <a class="menu-link" href="/pages/find-retailers"><span>FIND A RETAILER</span>
+                        <div class="pull-right">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="submenu-item clearfix">
+                    <a class="menu-link" href="/blogs/blog"><span>BLOG</span>
+                        <div class="pull-right">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="submenu-item clearfix">
+                    <a class="menu-link" href="/pages/support-all"><span>SUPPORT</span>
+                        <div class="pull-right">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                </li>
+                <!-- <li class="submenu-item clearfix">
+                    <a class="menu-link" href="#">
+                        <div class="pull-right">
+                            <span class="fa fa-chevron-right"></span>
+                        </div>
+                    </a>
+                </li> -->
+                <li class="submenu-item clearfix">
+                    {% include 'social-nav' %}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header-lower">
+        <div class="lower-wrapper clearfix">
+            <div class="branding"><a href="/"><img src="http://cdn.gosoundcast.com/Navbar/long-logo.png"></a></div>
+            {% unless template == 'cart' or page.handle == 'fitness'%}
+            <nav class="site-nav">
+                <ul class="clearfix">
+                    <!-- <li>
+                        <a href="/"><span>HOME</span></a>
+                    </li> -->
+                    <li>
+                        <a href="#" class="wireless-toggle"><span>WIRELESS SPEAKERS</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="audio-toggle"><span>AUDIO SOLUTIONS</span></a>
+                    </li>
+                    <li>
+                        <a href="/collections/accessories"><span>ACCESSORIES</span></a>
+                    </li>
+                    <li>
+                        <a href="/pages/find-retailers"><span>FIND A RETAILER</span></a>
+                    </li>
+                    <li>
+                        <a href="/blogs/blog"><span>BLOG</span></a>
+                    </li>
+                    <li class="no-right-margin">
+                        <a href="/pages/support-all"><span>SUPPORT</span></a>
+                    </li>
+                </ul>
+            </nav>
+            {% endunless %}
+
+        </div>
+        <!-- Collapse Wrapper : Style Collapse Menu Here -->
+        <div class="collapse-wrapper">
+            <ul class="submenu submenu-wireless wireless-collapse">
+            <li class="submenu-item text-center">
+                    <a href="/collections/wireless-speakers/products/melody">
+                        <img src="{{'navbar-melody.png' | asset_url }}">
+                        <p class="product-name">Melody</p>
+                    </a>
+                </li>
+                <li class="submenu-item text-center">
+                    <a href="http://www.gosoundcast.com/products/outcast-jr-bluetooth-hd">
+                        <img src="{{ 'navbar-outcastjr.png' | asset_url }}">
+                        <p class="product-name">OutCast Jr.</p>
+                    </a>
+                </li>
+                <li class="submenu-item text-center">
+                    <a href="http://www.gosoundcast.com/products/outcast-bluetooth-hd">
+                        <img src="{{ 'navbar-outcast.png' | asset_url }}">
+                        <p class="product-name">OutCast</p>
+                    </a>
+                </li>
+                <li class="submenu-item text-center">
+                    <a href="/collections/wireless-speakers/products/uat">
+                        <img src="{{ 'navbar-uat.png' | asset_url }}">
+                        <p class="product-name">UAT</p>
+                    </a>
+                </li>
+                <li class="submenu-item text-center">
+                    <a href="/collections/wireless-speakers/products/ICast">
+                        <img src="{{ 'navbar-icast.png' | asset_url }}">
+                        <p class="product-name">ICast</p>
+                    </a>
+                </li>
+                <li class="submenu-item text-center">
+                    <a href="/collections/wireless-speakers/products/bluecast">
+                        <img src="{{ 'navbar-bluecast.png' | asset_url }}">
+                        <p class="product-name">Bluecast</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="submenu submenu-audio audio-collapse">
+                <li class="submenu-item text-center">
+                    <a href="/collections/audio-solutions/products/subcast">
+                        <img src="{{ 'navbar-subcast.png' | asset_url }}">
+                        <p class="product-name">SubCast</p>
+                    </a>
+                </li>
+                <li class="submenu-item text-center">
+                    <a href="/collections/audio-solutions/products/surroundcast">
+                        <img src="{{ 'navbar-surroundcast.png' | asset_url }}">
+                        <p class="product-name">SurroundCast</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- END: header -->
