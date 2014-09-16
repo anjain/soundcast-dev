@@ -2799,6 +2799,33 @@ font-style: italic;
   text-align: center;
 }
 
+
+#Sound-Carousel #slide-8 {
+  background: url('sliderhome2.png') no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+
+.sliderhome2 {
+ 
+  float: right;
+  margin-right: 15%; 
+}
+
+.sliderhome3 {
+ 
+  float: right;
+  margin-right: -5%; 
+}
+
+#Sound-Carousel #slide-9 {
+  background: url('sliderhome1.png') no-repeat center;
+  background-size: cover;
+  text-align: center;
+  background-size: 100%;
+}
+
+
 #Sound-Carousel #slide-5 {
   background: url('5.jpg') no-repeat center;
   background-size: cover;
